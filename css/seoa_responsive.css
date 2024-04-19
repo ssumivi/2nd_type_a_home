@@ -1,0 +1,193 @@
+@charset "utf-8";
+@media screen and (max-width: 768px) {
+  .shortcut .inner {
+    width: 100%;
+    padding: 5% 10%;
+  }
+  .sidebtn {
+    display: none;
+  }
+  .section-title {
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+  .find {
+    font-family: "Pretendard-Regular";
+    font-size: 2rem;
+    color: #333;
+    padding-bottom: 1.5%;
+  }
+  .shortcutbtn > li {
+    width: calc(100% - 1%);
+    height: 100%;
+    margin-top: 3%;
+  }
+  .shortcut > .inner > ul > li > .shortcontents {
+    position: absolute;
+    top: 24%;
+    left: 5%;
+    width: 70%;
+    height: 60%;
+    z-index: 9;
+  }
+  .shortcut > .inner > ul > li > .shortbg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .shortcut > .inner > ul > li > .shortbtnimg {
+    position: absolute;
+    top: 4%;
+    right: 1%;
+    width: 22%;
+    height: 90%;
+    z-index: 9;
+  }
+  .shortcon {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #3e4149;
+    line-height: 130%;
+    padding-top: 1%;
+  }
+  .shortbtnti {
+    font-family: "GangwonEduPowerExtraBoldA";
+  font-size: 1.6rem;
+  color: #3e4149;
+  }
+  /* recommend */
+  .recommend .inner {
+    width: 100%;
+    padding: 10% 10%;
+  }
+  .recommend > .inner > ul > li:nth-child(2) {
+    display: none;
+  }
+  .recommend > .inner > ul > li:nth-child(3) {
+    display: none;
+  }
+  .btnmore {
+    margin-top: 3%;
+  }
+  .morebtn {
+    /* text-align:left; */
+    margin-bottom: 1.3%;
+    margin-left: 2%;
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  }
+  .morebtn2 {
+    /* text-align:left; */
+    margin-bottom: 1.3%;
+    margin-left: 8%;
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  }
+
+  .morebtn > img,
+  .offlinemore {
+    display: inline-block; /* img와 recommendmore를 inline-block으로 설정 */
+    vertical-align: middle; /* 수직 중앙 정렬 */
+    transition: transform 0.3s ease, font-weight 0.3s ease; /* 부드러운 변환 효과 */
+  }
+  .morebtn2 > img,
+  .onlinemore {
+    display: inline-block; /* img와 recommendmore를 inline-block으로 설정 */
+    vertical-align: middle; /* 수직 중앙 정렬 */
+    transition: transform 0.3s ease, font-weight 0.3s ease; /* 부드러운 변환 효과 */
+  }
+
+  .morebtn > img {
+    width: 8%;
+    transition: transform 0.3s ease; /* img 변환에 대한 부드러운 효과 */
+  }
+  .morebtn2 > img {
+    width: 8%;
+    transition: transform 0.3s ease; /* img 변환에 대한 부드러운 효과 */
+  }
+
+  .offlinemore,
+  .onlinemore {
+    font-family: "Pretendard-Regular";
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333;
+    margin-left: 1%; /* img와 recommendmore 사이 간격 */
+    transition: font-weight 0.3s ease; /* 폰트 굵기 변환에 대한 부드러운 효과 */
+  }
+
+  /* 마우스 오버 효과 */
+  .morebtn:hover img {
+    transform: translateX(10px); /* img를 오른쪽으로 10px 이동 */
+  }
+  .morebtn2:hover img {
+    transform: translateX(10px); /* img를 오른쪽으로 10px 이동 */
+  }
+
+  .morebtn:hover .offlinemore {
+    font-weight: bold; /* recommendmore의 폰트 굵기를 bold로 변경 */
+  }
+  .morebtn2:hover .onlinemore {
+    font-weight: bold; /* recommendmore의 폰트 굵기를 bold로 변경 */
+  }
+  .offline {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #aad9bb;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .online {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #d5f0c1;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .subtit {
+    white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+  }
+  .gangboxtit {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-size: 1rem;
+    color: #959595;
+    padding-left: 2%;
+  }
+  .ksas {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #242424;
+    padding: 8% 0% 4% 0%;
+  }
+  .ksas2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .card {
+    font-size: 1rem;
+    margin-top: 3%;
+    color: #7e7e7e;
+  }
+  .recommend > .inner > ul > li {
+    width: calc(100% / 2 - 1%);
+    height: 100%;
+    min-height: 300px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+  .gangbox {
+    padding: 7%;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    height: 100%;
+    max-width: 356px;
+    max-height: 217px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
