@@ -18,26 +18,35 @@ window.addEventListener("load", function () {
       console.error("Fetch error:", error);
     });
 
-  //notice area
   let NOTICE_ARR;
   let noticeTag = this.document.getElementById("data-notice");
+
   function showNotice() {
     let html = "";
-    NOTICE_ARR.slice(0, 2).forEach(function (item, index) {
+    let maxVisibleItems = 2; // 기본적으로 최대 2개의 항목을 표시
+    if (window.innerWidth < 480) {
+      // 화면 너비가 480px 이상인 경우
+      maxVisibleItems = 1; // 최대 표시할 항목 수를 1개로 설정
+    }
+    NOTICE_ARR.slice(0, maxVisibleItems).forEach(function (item, index) {
       let tag = `
-      <li class="noti-list-li">
-       <a href = "${item.noti_href}" class = "noti-li-wrap">
-       <p class ="notice-cate">${item.notice_cate}</p>
-        <p class="noti-list-pr">${item.title}</p>
-        <p class = "notice-info">${item.notice_info}</p>
-        <span class="noti-date">${item.date}</span>
-        </a>
-      </li>
-      `;
+                <li class="noti-list-li">
+                    <a href="${item.noti_href}" class="noti-li-wrap">
+                        <p class="notice-cate">${item.notice_cate}</p>
+                        <p class="noti-list-pr">${item.title}</p>
+                        <p class="notice-info">${item.notice_info}</p>
+                        <span class="noti-date">${item.date}</span>
+                    </a>
+                </li>
+            `;
       html += tag;
     });
     noticeTag.innerHTML = html;
   }
+
+  // 페이지가 로드될 때와 창 크기가 변경될 때 showNotice 함수를 호출하여 새로운 화면 크기에 따라 공지사항을 업데이트합니다.
+  window.addEventListener("load", showNotice);
+  window.addEventListener("resize", showNotice);
 });
 
 //리뷰영역 제이쿼리 스와이퍼
@@ -60,12 +69,15 @@ $(document).ready(function () {
         loopAdditionalSlides: 1,
         slidesPerGroupAuto: true,
         loop: true,
+        observeSlideChildren: true,
+        observer: true,
+        parallax: true,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
-        speed: 5000,
+        speed: 5800,
         // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
@@ -218,7 +230,7 @@ $(document).ready(function () {
         `;
         html += slideTag;
       } else {
-        const backgroundColor = index % 3 === 0 ? "#aad9bb" : "#F9F7C9";
+        const backgroundColor = index % 3 === 0 ? "#f2f2f2" : "#F2f2f2";
         // imgSrc 속성이 없는 경우에는 빈 이미지 태그로 출력
         var slideTag = `
           <div class="swiper-slide mini">
