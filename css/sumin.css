@@ -661,6 +661,7 @@
   .time-box {
     white-space: nowrap;
     width: 100%;
+    margin-top: 15px;
   }
 
   .cs-center-box {
