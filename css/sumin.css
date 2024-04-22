@@ -195,7 +195,7 @@
   content: "";
   position: absolute;
   display: block;
-  top: 0;
+  top: -2px;
   left: -70px;
   width: 45px;
   height: 23px;
@@ -676,7 +676,7 @@
   }
   /* footer */
   .footer {
-    height: 70.69vw;
+    height: 75.69vw;
   }
   .youtube-logo {
     display: none;
@@ -699,6 +699,9 @@
     height: 100%;
     object-fit: cover;
   }
+  .copy{
+    margin-top: 7%;
+  }
 }
 @media screen and (max-width: 440px) {
   .inner {
@@ -708,6 +711,12 @@
 @media screen and (max-width: 420px) {
   .inner {
     max-width: 370px;
+  }
+  .footer{
+    height: 83.12vw;
+  }
+  .copy{
+    margin-top: 8%;
   }
 }
 @media screen and (max-width: 400px) {
