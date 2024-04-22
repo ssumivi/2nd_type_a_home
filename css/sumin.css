@@ -518,6 +518,12 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .inner{
+    max-width: 620px;
+  }
+  .review .review-wrap {
+    height: 85vw;
+  }
   .sw-review .swiper-slide {
     width: 45% !important;
     height: 100%;
@@ -530,9 +536,6 @@
   }
   .notice {
     height: 100%;
-  }
-  .notice .inner {
-    max-width: 620px;
   }
   .notice-wrap {
     flex-direction: column;
@@ -578,6 +581,9 @@
   }
   .phone-icon {
     width: 5%;
+  }
+  .time-box{
+    margin-top: 15px;
   }
   /* footer */
   .footer {
@@ -661,7 +667,7 @@
   .time-box {
     white-space: nowrap;
     width: 100%;
-    margin-top: 15px;
+
   }
 
   .cs-center-box {
