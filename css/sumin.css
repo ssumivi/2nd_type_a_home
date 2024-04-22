@@ -310,6 +310,7 @@
 }
 .phone-icon {
   filter: saturate(0%) brightness(30%) grayscale(100%);
+  vertical-align: top;
   margin-bottom: 15px;
 }
 .cs-center-num {
@@ -322,9 +323,9 @@
   line-height: 1.41;
   text-align: center;
 }
-.clock-icon {
-  vertical-align: -4px;
-  margin-right: 5px;
+.fa-clock {
+  font-size: 1.375rem;
+  padding-right: 5px;
 }
 .time-title {
   font-size: 1.5rem;
@@ -655,6 +656,7 @@
   }
   .phone-icon {
     width: 5%;
+    margin-bottom: 10px;
   }
   .time-box {
     white-space: nowrap;
