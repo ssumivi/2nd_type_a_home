@@ -28,6 +28,9 @@ window.addEventListener("load", function () {
       // 화면 너비가 480px 이상인 경우
       maxVisibleItems = 1; // 최대 표시할 항목 수를 1개로 설정
     }
+    if (768 < window.innerWidth && window.innerWidth < 1080) {
+      maxVisibleItems = 1;
+    }
     NOTICE_ARR.slice(0, maxVisibleItems).forEach(function (item, index) {
       let tag = `
                 <li class="noti-list-li">
@@ -150,7 +153,9 @@ $(document).ready(function () {
 
       const startAutoplay = () => {
         if (startTimer) clearTimeout(startTimer);
-        startTimer = swReview.autoplay.start();
+        startTimer = setTimeout(() => {
+          swReview.autoplay.start();
+        }, 200);
       };
 
       const isPlaying = true;
@@ -166,10 +171,10 @@ $(document).ready(function () {
           swReview.slideTo(swReview.activeIndex, duration);
           startAutoplay();
         }
-        // isPlaying = !isPlaying;
+        isPlaying = !isPlaying;
         setTimeout(() => {
           clickable = true;
-        }, 200);
+        }, 0);
       };
 
       swReview.stopAutoplay = stopAutoplay;
