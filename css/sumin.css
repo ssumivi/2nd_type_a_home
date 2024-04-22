@@ -656,7 +656,7 @@
   }
   .phone-icon {
     width: 5%;
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
   .time-box {
     white-space: nowrap;
