@@ -155,8 +155,8 @@
   z-index: 99;
   cursor: pointer;
   display: block;
-  position: absolute;
-  right: 10%;
+  position: relative;
+  float: right;
   font-size: 3.2rem;
 }
 /* notice area */
@@ -489,9 +489,6 @@
     object-fit: cover;
     border-radius: 0;
   }
-  #stop_btn {
-    right: 11%;
-  }
   /* notice */
   .notice-list {
     height: 26vw;
@@ -518,11 +515,14 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .inner{
+  .inner {
     max-width: 620px;
   }
   .review .review-wrap {
     height: 85vw;
+  }
+  .review .section-title{
+    padding-bottom: 25px;
   }
   .sw-review .swiper-slide {
     width: 45% !important;
@@ -530,9 +530,6 @@
   }
   .sw-review .mini {
     width: 45% !important;
-  }
-  #stop_btn {
-    top: 24%;
   }
   .notice {
     height: 100%;
@@ -544,6 +541,9 @@
   }
   .notice-box {
     width: 100%;
+  }
+  .ns-more::before {
+    left: -55px;
   }
   .notice-list {
     height: 38vw;
@@ -582,7 +582,7 @@
   .phone-icon {
     width: 5%;
   }
-  .time-box{
+  .time-box {
     margin-top: 15px;
   }
   /* footer */
@@ -615,8 +615,8 @@
   }
 }
 @media screen and (max-width: 460px) {
-  .inner{
-    max-width: 420px;
+  .inner {
+    max-width: 410px;
   }
   .review {
     padding: 12% 0 45%;
@@ -633,9 +633,6 @@
   }
   .sw-review .mini {
     width: 85% !important;
-  }
-  #stop_btn {
-    top: 17%;
   }
   .notice {
     padding-top: 45px;
@@ -664,7 +661,6 @@
   .time-box {
     white-space: nowrap;
     width: 100%;
-
   }
 
   .cs-center-box {
@@ -705,23 +701,23 @@
   }
 }
 @media screen and (max-width: 440px) {
-  .inner{
-    max-width: 400px;
+  .inner {
+    max-width: 390px;
   }
 }
-@media screen and (max-width: 420px){
-  .inner{
-    max-width: 380px;
+@media screen and (max-width: 420px) {
+  .inner {
+    max-width: 370px;
   }
 }
 @media screen and (max-width: 400px) {
-  .inner{
-    max-width: 360px;
+  .inner {
+    max-width: 350px;
   }
 }
 @media screen and (max-width: 380px) {
-  .inner{
-    max-width: 340px;
+  .inner {
+    max-width: 330px;
   }
   .notice-list {
     height: 80vw;
@@ -731,13 +727,13 @@
   }
 }
 @media screen and (max-width: 360px) {
-  .inner{
-    max-width: 320px;
+  .inner {
+    max-width: 310px;
   }
 }
 @media screen and (max-width: 340px) {
-  .inner{
-    max-width: 300px;
+  .inner {
+    max-width: 290px;
   }
 }
 @media screen and (max-width: 320px) {
