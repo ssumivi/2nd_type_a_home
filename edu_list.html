@@ -45,7 +45,7 @@
       <div class="header-wrap .scrolled">
         <div class="header">
           <!-- 모바일메뉴 -->
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img src="images/main_logo.png" alt="로고" />
           </a>
           <div class="header-menuline">
@@ -125,21 +125,17 @@
           </ul>
         </div>
       </section>
-      <section class="enroll-select">
-        <ul class="enroll-list" id="data-enroll">
-          <li class="enroll-list-li">
-            <div class="thumbnail-img">
-              <img src="images/kiosk.png" alt="키오스크활용이미지" />
-            </div>
-            <div class="enroll-info">
-              <h2 class="erinfo-title">무인 결제대(키오스크) 사용하기</h2>
-              <div class="study-info">
-                <h2 class="erinfo-subtitle">교육내용</h2>
-                <p class="erinfo">카페나 음식점에서 <b>주문을 하거나,</b> 상점에서 <b>물건 구매</b>를 할 때, 결제 수단을 원활하게 사용하기 위한 <b>무인 결제대 (키오스크) 기기 사용법</b>을 알려줍니다.</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+      <section class="enroll-select" id="enroll-position">
+        <div class="inner">
+          <ul class="enroll-list" id="data-enroll">
+            <!-- data json -->
+          </ul>
+          <div class="er-pagination">
+            <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <span id="current-page">0</span> / <span id="total-pages">0</span>
+            <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
       </section>
       <!-- 하단 footer 영역 -->
       <footer class="footer">

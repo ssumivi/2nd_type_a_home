@@ -45,6 +45,16 @@ window.addEventListener("load", function () {
       } else {
         console.error("No review data found.");
       }
+      return data; // data 반환
+    })
+    .then(function (data) {
+      if (data && data.lecture_list && data.lecture_list.length > 0) {
+        LECTURE_ARR = data.lecture_list;
+        renderLecture(currentPage);
+        updatePagination();
+      } else {
+        console.error("No review data found.");
+      }
     })
     .catch(function (error) {
       console.error("Fetch error:", error);
@@ -117,4 +127,129 @@ window.addEventListener("load", function () {
       }
     }
   });
+
+  // 전체 강의 목록
+  let LECTURE_ARR;
+  // 각 페이지 당 보여줄 항목 수
+  const ITEMS_PER_PAGE = 2;
+  // 현재 페이지
+  let currentPage = 1;
+  const lectureTag = document.getElementById("data-enroll");
+
+  // 강의 목록을 특정 페이지에 맞게 렌더링하는 함수
+  function renderLecture(page) {
+    // 페이지에 해당하는 강의 항목의 시작 인덱스 계산
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    // 페이지에 해당하는 강의 항목의 끝 인덱스 계산
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    // 페이지에 해당하는 강의 목록 가져오기
+    const pageLectures = LECTURE_ARR.slice(startIndex, endIndex);
+
+    // 강의 목록을 HTML로 렌더링
+    let html = "";
+    pageLectures.forEach((item, idx) => {
+      const tag = `
+      <li class="enroll-list-li">
+        <div class="enroll-info-left">
+          <img src="${item.imgSrc}" alt="${item.lecture_title}" />
+        </div>
+        <div class="enroll-info-right">
+          <h2 class="erinfo-title">${item.lecture_title}</h2>
+          <div class="study-info">
+            <h2 class="erinfo-subtitle">교육내용</h2>
+            <p class="erinfo">${item.erinfo}</p>
+          </div>
+          <div class="study-contac">
+            <h2 class="erinfo-subtitle">교육문의</h2>
+            <p class="erinfo">전화문의) 1577-XXXX</p>
+          </div>
+          <div class="sr-wrap">
+            <a href="#" class="submit-bt">수강신청</a>
+            <a href="#" class="review-bt">수강생 후기</a>
+          </div>
+        </div>
+      </li>
+    `;
+      html += tag;
+    });
+    lectureTag.innerHTML = html;
+  }
+
+  // 페이지 로드 시 초기 강의 목록 렌더링
+  window.addEventListener("load", function () {
+    renderLecture(currentPage);
+    updatePagination();
+  });
+
+  // 페이지네이션을 업데이트하는 함수
+  function updatePagination() {
+    const total_pages = Math.ceil(LECTURE_ARR.length / ITEMS_PER_PAGE);
+    // 현재 페이지 번호 표시 업데이트
+    document.getElementById("current-page").textContent = currentPage;
+    // 전체 페이지 번호 표시 업데이트
+    document.getElementById("total-pages").textContent = total_pages;
+    // 이전 페이지 버튼 업데이트
+    document.getElementById("prev-btn").disabled = currentPage === 1;
+    // 다음 페이지 버튼 업데이트
+    document.getElementById("next-btn").disabled = currentPage === total_pages;
+  }
+
+  // 이전 페이지로 이동하는 함수
+  function goToPrevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderLecture(currentPage);
+      updatePagination();
+    }
+  }
+
+  // 다음 페이지로 이동하는 함수
+  function goToNextPage() {
+    const total_pages = Math.ceil(LECTURE_ARR.length / ITEMS_PER_PAGE);
+    if (currentPage < total_pages) {
+      currentPage++;
+      renderLecture(currentPage);
+      updatePagination();
+      // 페이지 상단으로 스크롤
+      scrollToSection();
+    }
+  }
+  // 특정 섹션으로 스크롤하는 함수
+  function scrollToSection() {
+    const section = document.getElementById("enroll-position");
+    if (section) {
+      // 섹션의 위치를 계산
+      const sectionTop = section.offsetTop;
+      // 섹션의 위치로 스크롤
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth", // 부드러운 스크롤 적용
+      });
+    }
+  }
+
+  // 이전 페이지 버튼 클릭 이벤트 리스너 등록
+  document.getElementById("prev-btn").addEventListener("click", goToPrevPage);
+  // 다음 페이지 버튼 클릭 이벤트 리스너 등록
+  document.getElementById("next-btn").addEventListener("click", goToNextPage);
+
+  // 함수: 센터 목록을 클릭하여 수강신청 페이지로 이동하거나 경고창을 띄우는 함수
+  function handleCenterClick(event) {
+    if (event.target.classList.contains("center-list-li")) {
+      // 센터 목록을 클릭한 경우
+      event.preventDefault(); // 기본 동작(링크 이동) 막기
+    } else if (event.target.classList.contains("submit-bt")) {
+      // 수강신청 버튼을 클릭한 경우
+      if (!document.querySelector(".center-list-li.active")) {
+        // 센터 목록이 비어있는 경우
+        alert("수강 장소를 선택해주세요.");
+        event.preventDefault(); // 기본 동작(링크 이동) 막기
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+  }
+
+  // 클릭 이벤트 리스너 등록
+  document.addEventListener("click", handleCenterClick);
 });
