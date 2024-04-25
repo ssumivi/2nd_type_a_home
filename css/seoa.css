@@ -139,7 +139,7 @@ a {
   height: 100%;
   border-radius: 0 81.725px 81.725px 0;
 }
-.shortcut > .inner > ul > li:hover .shortbg {
+.shortcut > .inner > .chucheon > li:hover .shortbg {
   box-shadow: 4px 8px 5px #c5ddb0;
 }
 /* recommend */
@@ -153,41 +153,41 @@ a {
   margin: 0 auto;
   padding: 45px 0;
 }
-.btnmore {
+.recommend > .inner > .btnmore{
+  display: flex;
   margin-top: 3%;
+  justify-content: center;
+  gap: 28%;
+}
+#morebtn{
+  display:none;
 }
 .morebtn {
-  /* text-align:left; */
-  margin-bottom: 1.3%;
-  margin-left: 13%;
+  width: 22%;
   cursor: pointer; /* 마우스 오버 시 커서 변경 */
 }
 .morebtn2 {
-  /* text-align:left; */
-  margin-bottom: 1.3%;
-  margin-left: 30%;
+  width: 20%;
   cursor: pointer; /* 마우스 오버 시 커서 변경 */
 }
 
 .morebtn > img,
-.offlinemore{
-  display: inline-block; /* img와 recommendmore를 inline-block으로 설정 */
+.offlinemore{ /* img와 recommendmore를 inline-block으로 설정 */
   vertical-align: middle; /* 수직 중앙 정렬 */
   transition: transform 0.3s ease, font-weight 0.3s ease; /* 부드러운 변환 효과 */
 }
 .morebtn2 > img,
 .onlinemore {
-  display: inline-block; /* img와 recommendmore를 inline-block으로 설정 */
   vertical-align: middle; /* 수직 중앙 정렬 */
   transition: transform 0.3s ease, font-weight 0.3s ease; /* 부드러운 변환 효과 */
 }
 
 .morebtn > img {
-  width: 5%;
+  width: 20%;
   transition: transform 0.3s ease; /* img 변환에 대한 부드러운 효과 */
 }
 .morebtn2 > img {
-  width: 5%;
+  width: 22%;
   transition: transform 0.3s ease; /* img 변환에 대한 부드러운 효과 */
 }
 
@@ -197,7 +197,7 @@ a {
   font-size: 1.6rem;
   font-weight: 500;
   color: #333;
-  margin-left: 1%; /* img와 recommendmore 사이 간격 */
+  margin-left: 5%; /* img와 recommendmore 사이 간격 */
   transition: font-weight 0.3s ease; /* 폰트 굵기 변환에 대한 부드러운 효과 */
 }
 
@@ -216,19 +216,23 @@ a {
   font-weight: bold; /* recommendmore의 폰트 굵기를 bold로 변경 */
 }
 
-.recommend > .inner > ul {
+.recommend > .inner > .chucheon {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
-.recommend > .inner > ul > li {
+.recommend > .inner > .chucheon > li {
   width: calc(100% / 4 - 1%);
   height: 100%;
   min-height: 501px;
   border-radius: 30px;
   box-shadow: 3px 3px 10px 0px #c3c3c3;
+  transition: transform 0.3s ease;
+}
+.chucheon > li:hover {
+  transform: translateY(-10px); /* 위로 10px 이동 */
 }
 .image-size {
   width: 100%; /* 기본 이미지 크기 */

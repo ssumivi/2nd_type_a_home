@@ -92,3 +92,16 @@ document.addEventListener("scroll", function () {
     sideBtn.style.bottom = "-10%";
   }
 });
+// ================================================================
+document.addEventListener('DOMContentLoaded', function() {
+  // 모든 span 요소에 대한 클릭 이벤트 리스너를 추가합니다.
+  document.querySelectorAll('.allmenu li span').forEach(item => {
+    item.addEventListener('click', function() {
+      // 클릭한 span에만 active 클래스를 추가하고, 나머지는 active 클래스를 제거합니다.
+      document.querySelectorAll('.allmenu li span').forEach(span => {
+        span.classList.remove('active');
+      });
+      item.classList.add('active');
+    });
+  });
+});
