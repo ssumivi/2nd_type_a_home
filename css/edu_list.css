@@ -4,14 +4,14 @@
 .top-banner {
   position: relative;
   width: 100%;
-  height: 390px;
+  height: 460px;
   left: 0px;
   top: 0px;
   background: linear-gradient(90deg, #80bcbd 0%, #aad9bb 100%);
 }
 .banner-txt {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -53,6 +53,13 @@
   top: 50%;
   transform: translateY(-50%);
   right: -5px;
+}
+.pg-title {
+  font-family: "GangwonEduPower";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.75rem;
+  margin: 3% 0;
 }
 .area-list {
   position: relative;
@@ -184,23 +191,33 @@
   text-align: center;
   padding: 14px 25px;
 }
-.submit-bt.active {
+.submit-bt:hover {
   background-color: #80bcbd;
   color: #ffffff;
   font-weight: 600;
+}
+.review-bt:hover {
+  background-color: #e2e2e2;
 }
 .er-pagination {
   position: relative;
   display: block;
   text-align: center;
 }
-#prev-btn, #next-btn {
-  width: 54px;
-  height: 54px;
+#prev-btn,
+#next-btn {
+  width: 45px;
+  height: 45px;
   background: #f2f2f2;
   color: #959595;
   border-radius: 50%;
   border: 0;
   margin: 0 25px;
   cursor: pointer;
+}
+.er-pagination #current-page {
+  padding-right: 7px;
+}
+.er-pagination #total-pages {
+  padding-left: 7px;
 }

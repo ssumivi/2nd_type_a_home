@@ -72,15 +72,12 @@ $(document).ready(function () {
         loopAdditionalSlides: 1,
         slidesPerGroupAuto: true,
         loop: true,
-        observeSlideChildren: true,
-        observer: true,
-        parallax: true,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
-        speed: 5800,
+        speed: 6500,
         // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
@@ -153,9 +150,7 @@ $(document).ready(function () {
 
       const startAutoplay = () => {
         if (startTimer) clearTimeout(startTimer);
-        startTimer = setTimeout(() => {
-          swReview.autoplay.start();
-        }, 200);
+        startTimer = swReview.autoplay.start();
       };
 
       const isPlaying = true;
@@ -171,10 +166,10 @@ $(document).ready(function () {
           swReview.slideTo(swReview.activeIndex, duration);
           startAutoplay();
         }
-        isPlaying = !isPlaying;
+        // isPlaying = !isPlaying;
         setTimeout(() => {
           clickable = true;
-        }, 0);
+        }, 200);
       };
 
       swReview.stopAutoplay = stopAutoplay;

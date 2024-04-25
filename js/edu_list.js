@@ -66,7 +66,7 @@ window.addEventListener("load", function () {
   function showArea() {
     let html = "";
     AREA_ARR.forEach((item, idx) => {
-      html += `<li class="area-list-li">${item.location}</li>`;
+      html += `<li class="area-list-li" data-location = "${item.location}">${item.location}</li>`;
     });
     areaTag.innerHTML = html;
   }
@@ -106,7 +106,7 @@ window.addEventListener("load", function () {
     // 첫 번째 위치에 해당하는 센터들 출력
     let html = "";
     firstLocationCenters.forEach((center) => {
-      html += `<li class="center-list-li">${center.name}</li>`;
+      html += `<li class="center-list-li" data-center = "${center.value}">${center.name}</li>`;
     });
     centerTag.innerHTML = html;
   }
@@ -121,7 +121,7 @@ window.addEventListener("load", function () {
       if (selectedCenters) {
         let html = "";
         selectedCenters.forEach((center) => {
-          html += `<li class="center-list-li">${center.name}</li>`;
+          html += `<li class="center-list-li" data-center = "${center.value}">${center.name}</li>`;
         });
         centerTag.innerHTML = html;
       }
@@ -164,7 +164,7 @@ window.addEventListener("load", function () {
             <p class="erinfo">전화문의) 1577-XXXX</p>
           </div>
           <div class="sr-wrap">
-            <a href="#" class="submit-bt">수강신청</a>
+            <a href="#" class="submit-bt" data-assign = "${item.lecture_title}">수강신청</a>
             <a href="#" class="review-bt">수강생 후기</a>
           </div>
         </div>
@@ -174,6 +174,52 @@ window.addEventListener("load", function () {
     });
     lectureTag.innerHTML = html;
   }
+
+  // 데이터 로컬스토리지에 저장
+  document.addEventListener("click", function (event) {
+    const dataWrap = event.target.closest("#data-wrap");
+
+    if (dataWrap) {
+      const dataValue = event.target.getAttribute("data-assign");
+      const areaValue = event.target.getAttribute("data-location");
+      const centerValue = event.target.getAttribute("data-center");
+
+      let storedData = localStorage.getItem("clickedValues");
+      if (!storedData) {
+        storedData = [];
+      } else {
+        storedData = JSON.parse(storedData);
+      }
+
+      const newData = {};
+      if (areaValue) {
+        newData.areaValue = areaValue;
+      }
+      if (centerValue) {
+        newData.centerValue = centerValue;
+      }
+      if (dataValue) {
+        newData.dataValue = dataValue;
+      }
+
+      // 중복된 값을 방지하기 위해 이미 저장된 데이터와 비교합니다.
+      const isDuplicate = storedData.some((item) => {
+        return item.dataValue === newData.dataValue && item.areaValue === newData.areaValue && item.centerValue === newData.centerValue;
+      });
+      if (!dataValue && !centerValue && !areaValue) {
+        const firstAreaButton = document.querySelector("#data-area .area-list-li");
+        if (firstAreaButton) {
+          newData.areaValue = firstAreaButton.getAttribute("data-location");
+        }
+      }
+
+      // 중복된 값이 아닌 경우에만 데이터를 저장합니다.
+      if (!isDuplicate) {
+        storedData.push(newData);
+        localStorage.setItem("clickedValues", JSON.stringify(storedData));
+      }
+    }
+  });
 
   // 페이지 로드 시 초기 강의 목록 렌더링
   window.addEventListener("load", function () {
@@ -220,9 +266,10 @@ window.addEventListener("load", function () {
     if (section) {
       // 섹션의 위치를 계산
       const sectionTop = section.offsetTop;
+      const offsetTop = 70;
       // 섹션의 위치로 스크롤
       window.scrollTo({
-        top: sectionTop,
+        top: sectionTop - offsetTop,
         behavior: "smooth", // 부드러운 스크롤 적용
       });
     }
@@ -245,7 +292,7 @@ window.addEventListener("load", function () {
         alert("수강 장소를 선택해주세요.");
         event.preventDefault(); // 기본 동작(링크 이동) 막기
       } else {
-        window.location.href = "index.html";
+        window.location.href = "enrolment_pg.html";
       }
     }
   }

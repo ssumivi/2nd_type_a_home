@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>교육과정찾기</title>
+    <title>수강신청</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
@@ -32,12 +32,13 @@
     <link rel="stylesheet" href="css/cheun.css" />
     <link rel="stylesheet" href="css/sumin.css" />
     <link rel="stylesheet" href="css/edu_list.css" />
+    <link rel="stylesheet" href="css/enrol.css" />
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <!-- 기본 js cdn -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
-    <script src="js/edu_list.js"></script>
+    <script src="js/enrol.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -112,38 +113,38 @@
         </div>
       </div>
       <div class="inner">
-        <h2 class="pg-title">교육과정찾기</h2>
+        <h2 class="pg-title">수강신청</h2>
       </div>
-      <div id="data-wrap">
-        <section class="area-select">
-          <div class="inner">
-            <ul class="area-list" id="data-area">
-              <!-- js data -->
+      <!-- submit area -->
+      <form id="submit-wrap">
+        <div class="inner">
+          <!-- 로컬스토리지 데이터 출력 (선택 강의 목록) -->
+          <div class="enrol-box">
+            <h2 class="box-title">스마트 길잡이 교육 신청 페이지 입니다.</h2>
+            <ul class="enrol-info" id="data-info">
+              <li class="enrol-info-li">신청하신 지역은 <b></b> 입니다.</li>
+              <li class="enrol-info-li">희망하신 강의는 <b></b> 입니다.</li>
+              <li class="sub-link">
+                <a href="edu_list.html">강의 지역 및 장소 / 강의 재선택하기</a>
+              </li>
             </ul>
+            <p class="sub-info">교육전반에 관한 안내를 위해 성함과 연락처를 수집하고 있습니다. 정확하게 입력하였는지 다시한번 확인해주세요.</p>
           </div>
-        </section>
-        <section class="center-select">
-          <div class="inner">
-            <ul class="center-list" id="data-center">
-              <!-- js data -->
-            </ul>
-          </div>
-        </section>
-        <section class="enroll-select" id="enroll-position">
-          <div class="inner">
-            <ul class="enroll-list" id="data-enroll">
-              <!-- data json -->
-            </ul>
-            <div class="er-pagination">
-              <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-              <span id="current-page">0</span> / <span id="total-pages">0</span>
-              <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          <!-- 로컬스토리지 데이터 저장 (연락처) -->
+          <div class="user-info-box">
+            <h2 class="box-title">성함과 연락처를 작성해주세요.</h2>
+            <p class="sub-title">안심하세요! 전화번호는 유출되지 않습니다</p>
+            <div class="input-box">
+              <label for="user-name">성함</label><input type="text" id="user-name" placeholder="홍길동"/>
+              <br />
+              <label for="user-mobile">연락처</label><input type="text" id="user-mobile" placeholder="01012345678"/>
             </div>
           </div>
-        </section>
-      </div>
+          <button class="submit-btn" type="submit">강의신청하기</button>
+        </div>
+      </form>
 
-      <!-- 하단 footer 영역 -->
+      <!-- footer area -->
       <footer class="footer">
         <a href="#" class="youtube-logo">
           <img src="images/youtube_logo.png" alt="유튜브 로고" />
