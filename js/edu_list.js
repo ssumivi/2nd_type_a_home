@@ -175,7 +175,6 @@ window.addEventListener("load", function () {
     lectureTag.innerHTML = html;
   }
 
-
   // 데이터 로컬스토리지에 저장
   document.addEventListener("click", function (event) {
     const dataWrap = event.target.closest("#data-wrap");
@@ -223,6 +222,7 @@ window.addEventListener("load", function () {
       }
     }
   });
+
 
   // 페이지 로드 시 초기 강의 목록 렌더링
   window.addEventListener("load", function () {
