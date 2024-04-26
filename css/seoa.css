@@ -139,7 +139,7 @@ a {
   height: 100%;
   border-radius: 0 81.725px 81.725px 0;
 }
-.shortcut > .inner > .chucheon > li:hover .shortbg {
+.shortcut > .inner > ul > li:hover .shortbg {
   box-shadow: 4px 8px 5px #c5ddb0;
 }
 /* recommend */

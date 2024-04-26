@@ -177,7 +177,9 @@
     align-items: center;
     justify-content: space-evenly;
 }
-
+#volunteer-apply{
+  position: relative;
+}
 .header-signup button{
     width: 100%;
     border: none;
@@ -201,10 +203,27 @@
   z-index: 1;
   line-height: 1.2;
 }
+.hd-menu3{
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: -10px;
+  background-color: #80bcbd;
+  border-radius: 35px;
+  width:130px ;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1;
+  line-height: 1.2;
+}
 .hd-menu2 >li{
   text-align: center;
 }
 .hd-menu2.active{
+  display: block !important;
+ 
+}
+.hd-menu3.active{
   display: block !important;
  
 }
@@ -218,19 +237,7 @@ top: 22%;
 font-size: 1.2rem;
 
 }
-.hd-menu3 {
-  display: none;
-  position: absolute;
-  top: 130%;
-  left: 26.5%;
-  background-color: #80bcbd;
-  border-radius: 35px;
-  height: 147%;
-  width: 11%;
-  text-align: center;
-  
-  z-index: 1;
-}
+
 .hd-menu3 a{
   position: absolute;
 color: #fff !important;

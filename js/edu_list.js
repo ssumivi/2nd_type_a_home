@@ -149,7 +149,7 @@ window.addEventListener("load", function () {
     let html = "";
     pageLectures.forEach((item, idx) => {
       const tag = `
-      <li class="enroll-list-li">
+      <li class="enroll-list-li" id = "${item.number}">
         <div class="enroll-info-left">
           <img src="${item.imgSrc}" alt="${item.lecture_title}" />
         </div>
