@@ -77,7 +77,7 @@ $(document).ready(function () {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
-        speed: 8600,
+        speed: 7600,
         // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
@@ -156,7 +156,7 @@ $(document).ready(function () {
         // 시작하기 전에 약간의 지연을 추가합니다.
         setTimeout(() => {
           startTimer = swReview.autoplay.start();
-        }, 200);
+        }, 40);
       };
 
       const isPlaying = true;
