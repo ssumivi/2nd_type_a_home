@@ -175,6 +175,7 @@ window.addEventListener("load", function () {
     lectureTag.innerHTML = html;
   }
 
+
   // 데이터 로컬스토리지에 저장
   document.addEventListener("click", function (event) {
     const dataWrap = event.target.closest("#data-wrap");
@@ -207,13 +208,13 @@ window.addEventListener("load", function () {
         return item.dataValue === newData.dataValue && item.areaValue === newData.areaValue && item.centerValue === newData.centerValue;
       });
 
-     // 첫 번째 지역 값이 없는 경우, 첫 번째 지역 값을 추가합니다.
-     if (!dataValue && !centerValue && !areaValue) {
-      const firstAreaButton = document.querySelector("#data-area .area-list-li");
-      if (firstAreaButton) {
+      // 첫 번째 지역 값이 없는 경우, 첫 번째 지역 값을 추가합니다.
+      if (!dataValue && !centerValue && !areaValue) {
+        const firstAreaButton = document.querySelector("#data-area .area-list-li");
+        if (firstAreaButton) {
           newData.areaValue = firstAreaButton.getAttribute("data-location");
+        }
       }
-  }
 
       // 중복된 값이 아닌 경우에만 데이터를 저장합니다.
       if (!isDuplicate) {
