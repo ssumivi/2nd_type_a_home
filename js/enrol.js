@@ -27,4 +27,24 @@ window.addEventListener("load", function () {
   }
 
   renderPgNavi();
+
+  // local storage
+  const storedData = JSON.parse(localStorage.getItem("clickedValues"));
+  if (storedData) {
+    const dataInit = this.document.getElementById("data-info");
+    html = "";
+    storedData.forEach( (item) => {
+      const tag = `
+      <li class="enrol-info-li">신청하신 지역은 <b>${item.areaValue}, ${item.centerValue}</b> 입니다.</li>
+                <li class="enrol-info-li">희망하신 강의는 <b>${item.dataValue}</b> 입니다.</li>
+                <li class="sub-link">
+                  <a href="edu_list.html">강의 지역 및 장소 / 강의 재선택하기</a>
+                </li>
+      `;
+      html += tag;
+    });
+    dataInit.innerHTML = html;
+  } else {
+    console.log("저장된 데이터가 없습니다.");
+  }
 });
