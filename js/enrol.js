@@ -33,19 +33,18 @@ window.addEventListener("load", function () {
     const dataInit = document.getElementById("data-info");
     let html = "";
 
-    if (storedData.length === 3) {
-      const areaValue = storedData[0].areaValue || "";
-      const centerValue = storedData[1].centerValue || "";
-      const dataValue = storedData[2].dataValue || "";
+    if (storedData.length >= 2 && storedData.length <= 3) {
+      const centerValue = storedData.find((item) => item.centerValue)?.centerValue || "";
+      const dataValue = storedData.find((item) => item.dataValue)?.dataValue || "";
 
       // 신청한 지역과 강의 정보를 한 번만 출력
       html += `
-      <li class="enrol-info-li">신청하신 지역은 <b>${areaValue}, ${centerValue}</b> 입니다.<br>
-      희망하신 강의는 <b>${dataValue}</b> 입니다.</li>
-      <li class="sub-link">
-        <a href="edu_list.html">강의 지역 및 장소 / 강의 재선택하기</a>
-      </li>
-    `;
+        <li class="enrol-info-li">신청하신 지역은 <b>${centerValue}</b> 입니다.<br>
+        희망하신 강의는 <b>${dataValue}</b> 입니다.</li>
+        <li class="sub-link">
+          <a href="edu_list.html">강의 지역 및 장소 / 강의 재선택하기</a>
+        </li>
+      `;
     }
 
     dataInit.innerHTML = html;
