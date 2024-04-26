@@ -206,12 +206,14 @@ window.addEventListener("load", function () {
       const isDuplicate = storedData.some((item) => {
         return item.dataValue === newData.dataValue && item.areaValue === newData.areaValue && item.centerValue === newData.centerValue;
       });
-      if (!dataValue && !centerValue && !areaValue) {
-        const firstAreaButton = document.querySelector("#data-area .area-list-li");
-        if (firstAreaButton) {
+
+     // 첫 번째 지역 값이 없는 경우, 첫 번째 지역 값을 추가합니다.
+     if (!dataValue && !centerValue && !areaValue) {
+      const firstAreaButton = document.querySelector("#data-area .area-list-li");
+      if (firstAreaButton) {
           newData.areaValue = firstAreaButton.getAttribute("data-location");
-        }
       }
+  }
 
       // 중복된 값이 아닌 경우에만 데이터를 저장합니다.
       if (!isDuplicate) {
