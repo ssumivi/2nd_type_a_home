@@ -795,16 +795,31 @@
     padding: 8% 5% 25%;
   }
   .ft-logo {
-    width: 48%;
+    width: 40%;
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 58%;
     text-align: center;
+    margin-top: 5%;
   }
   .footer-wrap a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .footer-wrap a:last-child {
+    position: relative;
+  }
+  .footer-wrap a:last-child::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -25%;
+    width: 10px;
+    height: 10px;
+    background: url("../images/chevron-right-solid.png") no-repeat center / cover;
+    filter: brightness(200%);
   }
   .copy::before {
     content: "";
@@ -907,7 +922,7 @@
   }
   /* footer */
   .footer {
-    height: 75.69vw;
+    height: 77.69vw;
   }
   .youtube-logo {
     display: none;
@@ -969,7 +984,7 @@
     max-width: 370px;
   }
   .footer {
-    height: 75.12vw;
+    height: 80.12vw;
   }
   .copy::before {
     content: "";
@@ -988,7 +1003,7 @@
     max-width: 350px;
   }
   .footer {
-    height: 78.12vw;
+    height: 83.12vw;
   }
 }
 @media screen and (max-width: 380px) {
@@ -1014,7 +1029,7 @@
     max-width: 310px;
   }
   .footer {
-    height: 80.12vw;
+    height: 84.12vw;
   }
   .copy::before {
     content: "";
@@ -1028,12 +1043,17 @@
     margin-top: 11%;
   }
 }
+@media screen and (max-width: 350px) {
+  .footer {
+    height: 87.12vw;
+  }
+}
 @media screen and (max-width: 340px) {
   .inner {
     max-width: 290px;
   }
   .footer {
-    height: 90.12vw;
+    height: 95.12vw;
   }
   .ft-logo {
     padding-top: 8%;
@@ -1047,7 +1067,7 @@
     height: 85vw;
   }
   .footer {
-    height: 87.98vw;
+    height: 95.98vw;
   }
   .ft-logo {
     padding-top: 5%;
