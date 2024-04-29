@@ -507,12 +507,30 @@
     width: 8%;
   }
   .youtube-logo {
+    top: 8%;
     width: 4%;
-    right: 75px;
+    right: 60px;
   }
 
   .youtube-logo img {
     width: 100%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .footer {
+    height: 20vw;
+  }
+  .ft-logo {
+    width: 30%;
+  }
+  .footer-wrap {
+    padding: 6% 5% 2%;
+  }
+  .footer-wrap a {
+    font-size: 1.45rem;
+  }
+  .copy {
+    font-size: 1.125rem;
   }
 }
 @media screen and (max-width: 1180px) {
@@ -547,6 +565,37 @@
   }
   .youtube-logo {
     display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  /* footer */
+  .footer {
+    height: 35.1562vw;
+  }
+  .youtube-logo {
+    display: block;
+    width: 7%;
+    right: 45px;
+  }
+  .youtube-logo img {
+    width: 100%;
+  }
+  .footer-wrap {
+    padding: 17% 5% 2%;
+  }
+  .ft-logo {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+  }
+  .footer-wrap a {
+    font-size: 1.45rem;
+  }
+  .footer-wrap a img {
+    width: 100%;
+  }
+  .copy {
+    margin-top: 6%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -631,7 +680,7 @@
   .youtube-logo {
     display: block;
     width: 7%;
-    right: 75px;
+    right: 35px;
   }
   .youtube-logo img {
     width: 100%;
@@ -642,7 +691,7 @@
   .ft-logo {
     position: absolute;
     top: 10%;
-    left: 0;
+    left: 5%;
   }
   .footer-wrap a {
     font-size: 1.45rem;
