@@ -536,7 +536,7 @@
   .notice-box {
     width: calc(50% - 45px);
   }
-  .noti-list-li{
+  .noti-list-li {
     width: 100%;
   }
   .notice-list {
@@ -545,7 +545,7 @@
   .cs-center-box {
     width: calc(50% - 45px);
   }
-  .youtube-logo{
+  .youtube-logo {
     display: none;
   }
 }
@@ -728,19 +728,73 @@
     height: 64vw;
   }
   .footer {
-    height: 63vw;
+    height: 76vw;
+  }
+  .youtube-logo {
+    display: block;
+    width: 8%;
+    right: 45px;
+    top: 9%;
   }
   .ft-logo {
     top: 8%;
   }
   .footer-wrap {
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
+    padding: 8% 5% 25%;
+  }
+  .ft-logo {
+    width: 48%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: center;
+  }
+  .footer-wrap a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -75%;
+    transform: translateY(-75%);
+    left: 0;
+    width: 180%;
+    height: 1px;
+    background-color: #fff;
+  }
+  .copy {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin-top: 6%;
+    width: 50%;
+    text-align: left;
+    word-break: keep-all;
+    line-height: 1.24;
   }
 }
 @media screen and (max-width: 480px) {
-  .noti-list-li{
+  .noti-list-li {
     width: 100%;
+  }
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -90%;
+    left: 0;
+    width: 180%;
+    height: 1px;
+    background-color: #fff;
+  }
+  .copy {
+    margin-top: 8%;
   }
 }
 @media screen and (max-width: 460px) {
@@ -812,29 +866,55 @@
   }
   .footer-wrap {
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
-    padding: 30% 5% 2%;
+    padding: 8% 5% 25%;
   }
   .ft-logo {
-    width: 100%;
+    width: 48%;
     position: absolute;
-    top: 4%;
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%);
     text-align: center;
   }
   .footer-wrap a img {
-    width: 90%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -75%;
+    transform: translateY(-75%);
+    left: 0;
+    width: 160%;
+    height: 1px;
+    background-color: #fff;
+  }
   .copy {
-    margin-top: 7%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin-top: 6%;
+    width: 56%;
+    text-align: left;
+    word-break: keep-all;
+    line-height: 1.24;
   }
 }
 @media screen and (max-width: 440px) {
   .inner {
     max-width: 390px;
+  }
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -60%;
+    transform: translateY(-75%);
+    left: 0;
   }
 }
 @media screen and (max-width: 420px) {
@@ -842,15 +922,26 @@
     max-width: 370px;
   }
   .footer {
-    height: 83.12vw;
+    height: 75.12vw;
+  }
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -64%;
+    transform: translateY(-75%);
+    left: 0;
   }
   .copy {
-    margin-top: 8%;
+    margin-top: 10%;
   }
 }
 @media screen and (max-width: 400px) {
   .inner {
     max-width: 350px;
+  }
+  .footer {
+    height: 78.12vw;
   }
 }
 @media screen and (max-width: 380px) {
@@ -860,22 +951,71 @@
   .notice-list {
     height: 80vw;
   }
-  .footer {
-    height: 86.12vw;
+}
+@media screen and (max-width: 370px) {
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -50%;
+    transform: translateY(-75%);
+    left: 0;
   }
 }
 @media screen and (max-width: 360px) {
   .inner {
     max-width: 310px;
   }
+  .footer {
+    height: 80.12vw;
+  }
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -37%;
+    transform: translateY(-75%);
+    left: 0;
+  }
+  .copy {
+    margin-top: 11%;
+  }
 }
 @media screen and (max-width: 340px) {
   .inner {
     max-width: 290px;
   }
+  .footer {
+    height: 90.12vw;
+  }
+  .ft-logo {
+    padding-top: 8%;
+  }
+  .copy {
+    margin-top: 9%;
+  }
 }
 @media screen and (max-width: 320px) {
   .notice-list {
     height: 85vw;
+  }
+  .footer {
+    height: 87.98vw;
+  }
+  .ft-logo {
+    padding-top: 5%;
+  }
+  .copy::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -29%;
+    transform: translateY(-75%);
+    left: 0;
+  }
+  .copy {
+    font-size: 1rem;
+    margin-top: 8%;
+    width: 56%;
   }
 }
