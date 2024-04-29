@@ -792,13 +792,13 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    padding: 8% 5% 25%;
+    padding: 25% 5% 25%;
   }
   .ft-logo {
     width: 40%;
     position: absolute;
-    top: 100%;
-    left: 58%;
+    top: 0%;
+    left: 5%;
     text-align: center;
     margin-top: 5%;
   }
@@ -828,16 +828,16 @@
     top: -75%;
     transform: translateY(-75%);
     left: 0;
-    width: 180%;
+    width: 150%;
     height: 1px;
     background-color: #f0f0f0;
   }
   .copy {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 5%;
     margin-top: 6%;
-    width: 50%;
+    width: 60%;
     text-align: left;
     word-break: keep-all;
     line-height: 1.24;
@@ -846,15 +846,6 @@
 @media screen and (max-width: 480px) {
   .noti-list-li {
     width: 100%;
-  }
-  .copy::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -90%;
-    left: 0;
-    width: 180%;
-    height: 1px;
   }
   .copy {
     margin-top: 8%;
@@ -927,19 +918,7 @@
   .youtube-logo {
     display: none;
   }
-  .footer-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 8% 5% 25%;
-  }
-  .ft-logo {
-    width: 48%;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    text-align: center;
-  }
+
   .footer-wrap a img {
     width: 100%;
     height: 100%;
@@ -952,15 +931,12 @@
     top: -75%;
     transform: translateY(-75%);
     left: 0;
-    width: 160%;
     height: 1px;
   }
   .copy {
     position: absolute;
-    top: 50%;
     left: 5%;
     margin-top: 6%;
-    width: 56%;
     text-align: left;
     word-break: keep-all;
     line-height: 1.24;
@@ -970,32 +946,19 @@
   .inner {
     max-width: 390px;
   }
-  .copy::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -60%;
-    transform: translateY(-75%);
-    left: 0;
-  }
 }
 @media screen and (max-width: 420px) {
   .inner {
     max-width: 370px;
   }
   .footer {
-    height: 80.12vw;
+    height: 88.12vw;
   }
-  .copy::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -68%;
-    transform: translateY(-75%);
-    left: 0;
+  .copy::before{
+    width: 140%;
   }
-  .copy {
-    margin-top: 10%;
+  .copy{
+    width: 65%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1013,15 +976,14 @@
   .notice-list {
     height: 80vw;
   }
-}
-@media screen and (max-width: 370px) {
-  .copy::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -50%;
-    transform: translateY(-75%);
-    left: 0;
+  .ft-logo{
+    width: 45%;
+  }
+  .copy::before{
+    width: 130%;
+  }
+  .copy{
+    width: 70%;
   }
 }
 @media screen and (max-width: 360px) {
@@ -1031,21 +993,17 @@
   .footer {
     height: 84.12vw;
   }
-  .copy::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -37%;
-    transform: translateY(-75%);
-    left: 0;
-  }
-  .copy {
-    margin-top: 11%;
-  }
+
 }
 @media screen and (max-width: 350px) {
   .footer {
     height: 87.12vw;
+  }
+  .copy::before{
+    width: 125%;
+  }
+  .copy{
+    width: 73%;
   }
 }
 @media screen and (max-width: 340px) {
@@ -1055,11 +1013,11 @@
   .footer {
     height: 95.12vw;
   }
-  .ft-logo {
-    padding-top: 8%;
+  .copy::before{
+    width: 115%;
   }
-  .copy {
-    margin-top: 9%;
+  .copy{
+    width: 78%;
   }
 }
 @media screen and (max-width: 320px) {
@@ -1069,20 +1027,11 @@
   .footer {
     height: 95.98vw;
   }
-  .ft-logo {
-    padding-top: 5%;
-  }
-  .copy::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -29%;
-    transform: translateY(-75%);
-    left: 0;
+  .copy::before{
+    width: 120%;
   }
   .copy {
     font-size: 1rem;
-    margin-top: 8%;
-    width: 56%;
+    width: 75%;
   }
 }
