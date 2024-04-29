@@ -110,3 +110,8 @@
   background: #80bcbd;
   color: #fff;
 }
+.error-message {
+  color: red; /* 오류 메시지의 텍스트 색상 설정 */
+  font-size: 12px; /* 오류 메시지의 글꼴 크기 설정 */
+  margin-top: 5px; /* 오류 메시지와 입력란 사이의 간격 설정 */
+}

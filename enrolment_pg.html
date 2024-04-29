@@ -121,9 +121,7 @@
           <!-- 로컬스토리지 데이터 출력 (선택 강의 목록) -->
           <div class="enrol-box">
             <h2 class="box-title">스마트 길잡이 교육 신청 페이지 입니다.</h2>
-            <ul class="enrol-info" id="data-info">
-              
-            </ul>
+            <ul class="enrol-info" id="data-info"></ul>
             <p class="sub-info">교육전반에 관한 안내를 위해 성함과 연락처를 수집하고 있습니다. 정확하게 입력하였는지 다시한번 확인해주세요.</p>
           </div>
           <!-- 로컬스토리지 데이터 저장 (연락처) -->
@@ -131,9 +129,11 @@
             <h2 class="box-title">성함과 연락처를 작성해주세요.</h2>
             <p class="sub-title">안심하세요! 전화번호는 유출되지 않습니다</p>
             <div class="input-box">
-              <label for="user-name">성함</label><input type="text" id="user-name" placeholder="홍길동"/>
+              <label for="user-name">성함</label><input type="text" id="user-name" placeholder="홍길동" />
+              <div class="error-message" id="name-error"></div>
               <br />
-              <label for="user-mobile">연락처</label><input type="text" id="user-mobile" placeholder="01012345678"/>
+              <label for="user-mobile">연락처</label><input type="tel" id="user-mobile" placeholder="01012345678" />
+              <div class="error-message" id="mobile-error"></div>
             </div>
           </div>
           <button class="submit-btn" type="submit">강의신청하기</button>

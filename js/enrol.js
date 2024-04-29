@@ -72,4 +72,55 @@ window.addEventListener("load", function () {
   } else {
     console.log("저장된 데이터가 없습니다.");
   }
+
+  // 이름 유효성 검사 함수
+  function validateName(name) {
+    // 이름 유효성을 검사하는 정규식
+    let nameRegex = /^[가-힣]{2,}$/;
+    // 유효성 검사 결과를 반환
+    return nameRegex.test(name);
+  }
+
+  // 전화번호 유효성 검사 함수
+  function validatePhoneNumber(phoneNumber) {
+    // 전화번호 유효성을 검사하는 정규식
+    let phoneNumberRegex = /^01([0|1|6|7|8|9])([0-9]{4})([0-9]{4})$/;
+    // 유효성 검사 결과를 반환
+    return phoneNumberRegex.test(phoneNumber);
+  }
+
+  // 사용자 정보를 저장하는 함수
+  function saveUserInfo() {
+    // 성함과 연락처를 가져옴
+    const userName = document.getElementById("user-name").value;
+    const userMobile = document.getElementById("user-mobile").value;
+    const nameError = document.getElementById("name-error");
+    const mobileError = document.getElementById("mobile-error");
+
+    // 이름 유효성 검사
+    if (!validateName(userName)) {
+      nameError.textContent = "성함을 한글로 2글자 이상 입력해주세요.";
+      nameError.classList.add("error-message"); // 오류 메시지를 표시할 요소에 클래스 추가
+      return;
+    } else {
+      nameError.textContent = "";
+      nameError.classList.remove("error-message"); // 오류 메시지를 표시할 요소에 클래스 제거
+    }
+
+    // 전화번호 유효성 검사
+    if (!validatePhoneNumber(userMobile)) {
+      mobileError.textContent = "올바른 전화번호 형식이 아닙니다. 전화번호는 10자리 또는 11자리의 숫자로 입력해주세요.";
+      mobileError.classList.add("error-message"); // 오류 메시지를 표시할 요소에 클래스 추가
+      return;
+    } else {
+      mobileError.textContent = "";
+      mobileError.classList.remove("error-message"); // 오류 메시지를 표시할 요소에 클래스 제거
+    }
+
+    // 사용자 정보를 객체로 만들어서 로컬 스토리지에 저장
+    localStorage.setItem("userInfo", JSON.stringify({ name: userName, mobile: userMobile }));
+
+    // 버튼에 "active" 클래스 추가
+    document.querySelector(".submit-btn").classList.add("active");
+  }
 });
