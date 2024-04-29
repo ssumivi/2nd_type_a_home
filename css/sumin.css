@@ -766,7 +766,7 @@
     left: 0;
     width: 180%;
     height: 1px;
-    background-color: #fff;
+    background-color: #f0f0f0;
   }
   .copy {
     position: absolute;
@@ -791,7 +791,6 @@
     left: 0;
     width: 180%;
     height: 1px;
-    background-color: #fff;
   }
   .copy {
     margin-top: 8%;
@@ -891,7 +890,6 @@
     left: 0;
     width: 160%;
     height: 1px;
-    background-color: #fff;
   }
   .copy {
     position: absolute;
@@ -928,7 +926,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: -64%;
+    top: -68%;
     transform: translateY(-75%);
     left: 0;
   }
