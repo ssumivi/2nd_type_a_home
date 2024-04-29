@@ -27,20 +27,41 @@ window.addEventListener("load", function () {
   }
 
   renderPgNavi();
-
   const storedData = JSON.parse(localStorage.getItem("clickedValues"));
   if (storedData) {
     const dataInit = document.getElementById("data-info");
     let html = "";
 
-    if (storedData.length >= 2 && storedData.length <= 3) {
-      const centerValue = storedData.find((item) => item.centerValue)?.centerValue || "";
-      const dataValue = storedData.find((item) => item.dataValue)?.dataValue || "";
+    // 센터와 강의를 저장할 변수 초기화
+    let latestCenter = "";
+    let latestEnrol = "";
 
-      // 신청한 지역과 강의 정보를 한 번만 출력
+    // 최신 데이터가 존재하는 경우에만 처리
+    if (storedData.length > 0) {
+      // 모든 데이터를 반복하면서 센터와 강의에 대한 최신 값을 찾음
+      storedData.forEach((item) => {
+        if (item.centerValue) {
+          latestCenter = item.centerValue;
+        }
+        if (item.dataValue) {
+          latestEnrol = item.dataValue;
+        }
+      });
+
+      // 센터와 강의에 대한 최신 값을 출력
+      if (latestCenter) {
+        html += `
+          <li class="enrol-info-li">신청하신 지역은 <b>${latestCenter}</b> 입니다.</li>
+        `;
+      }
+      if (latestEnrol) {
+        html += `
+          <li class="enrol-info-li">희망하신 강의는 <b>${latestEnrol}</b> 입니다.</li>
+        `;
+      }
+
+      // "강의 지역 및 장소 / 강의 재선택하기" 링크 추가
       html += `
-        <li class="enrol-info-li">신청하신 지역은 <b>${centerValue}</b> 입니다.<br>
-        희망하신 강의는 <b>${dataValue}</b> 입니다.</li>
         <li class="sub-link">
           <a href="edu_list.html">강의 지역 및 장소 / 강의 재선택하기</a>
         </li>
@@ -51,9 +72,4 @@ window.addEventListener("load", function () {
   } else {
     console.log("저장된 데이터가 없습니다.");
   }
-  // "강의 지역 및 장소 / 강의 재선택하기" 링크를 클릭할 때의 이벤트 리스너
-  document.querySelector(".sub-link a").addEventListener("click", function (event) {
-    // 로컬 스토리지에서 저장된 데이터 초기화
-    localStorage.removeItem("clickedValues");
-  });
 });
