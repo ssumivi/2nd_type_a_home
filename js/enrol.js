@@ -27,6 +27,7 @@ window.addEventListener("load", function () {
   }
 
   renderPgNavi();
+
   const storedData = JSON.parse(localStorage.getItem("clickedValues"));
   if (storedData) {
     const dataInit = document.getElementById("data-info");
@@ -73,54 +74,61 @@ window.addEventListener("load", function () {
     console.log("저장된 데이터가 없습니다.");
   }
 
-  // 이름 유효성 검사 함수
-  function validateName(name) {
-    // 이름 유효성을 검사하는 정규식
-    let nameRegex = /^[가-힣]{2,}$/;
-    // 유효성 검사 결과를 반환
-    return nameRegex.test(name);
-  }
-
-  // 전화번호 유효성 검사 함수
-  function validatePhoneNumber(phoneNumber) {
-    // 전화번호 유효성을 검사하는 정규식
-    let phoneNumberRegex = /^01([0|1|6|7|8|9])([0-9]{4})([0-9]{4})$/;
-    // 유효성 검사 결과를 반환
-    return phoneNumberRegex.test(phoneNumber);
-  }
-
   // 사용자 정보를 저장하는 함수
   function saveUserInfo() {
-    // 성함과 연락처를 가져옴
-    const userName = document.getElementById("user-name").value;
-    const userMobile = document.getElementById("user-mobile").value;
-    const nameError = document.getElementById("name-error");
-    const mobileError = document.getElementById("mobile-error");
+    // 성함과 연락처를 가져옵니다.
+    const userName = document.getElementById("user-name").value.trim();
+    const userMobile = document.getElementById("user-mobile").value.trim();
 
-    // 이름 유효성 검사
-    if (!validateName(userName)) {
-      nameError.textContent = "성함을 한글로 2글자 이상 입력해주세요.";
-      nameError.classList.add("error-message"); // 오류 메시지를 표시할 요소에 클래스 추가
-      return;
+    // 이름과 전화번호가 모두 입력되었는지 확인합니다.
+    if (userName !== "" && userMobile !== "") {
+      // 유효성 검사 오류 메시지를 초기화합니다.
+      document.getElementById("name-error").textContent = "";
+      document.getElementById("mobile-error").textContent = "";
+
+      // 이름 유효성 검사
+      let userNameRegex = /^[가-힣]{2,15}$/;
+      if (!userNameRegex.test(userName)) {
+        document.getElementById("name-error").textContent = "성함은 두 자리 이상의 한글로 작성해주세요.";
+        return; // 오류가 발생한 경우 함수를 여기서 종료합니다.
+      }
+
+      // 전화번호 유효성 검사
+      let userMobileRegex = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
+      if (!userMobileRegex.test(userMobile)) {
+        document.getElementById("mobile-error").textContent = "전화번호는 11자리의 숫자로 입력해주세요.";
+        return; // 오류가 발생한 경우 함수를 여기서 종료합니다.
+      }
+
+      // 사용자 정보를 객체로 만들어서 로컬 스토리지에 저장합니다.
+      const userInfo = { name: userName, mobile: userMobile };
+      const userInfoList = JSON.parse(localStorage.getItem("userInfoList")) || [];
+      userInfoList.push(userInfo);
+      localStorage.setItem("userInfoList", JSON.stringify(userInfoList));
+
+      // 폼을 다시 초기화합니다.
+      document.getElementById("user-name").value = "";
+      document.getElementById("user-mobile").value = "";
+
+      // 페이지 이동
+      window.location.href = "enrolchk.html";
     } else {
-      nameError.textContent = "";
-      nameError.classList.remove("error-message"); // 오류 메시지를 표시할 요소에 클래스 제거
+      // 사용자 정보가 모두 기입되지 않은 경우 알림창을 표시합니다.
+      alert("성함과 연락처를 모두 입력하세요.");
     }
-
-    // 전화번호 유효성 검사
-    if (!validatePhoneNumber(userMobile)) {
-      mobileError.textContent = "올바른 전화번호 형식이 아닙니다. 전화번호는 10자리 또는 11자리의 숫자로 입력해주세요.";
-      mobileError.classList.add("error-message"); // 오류 메시지를 표시할 요소에 클래스 추가
-      return;
-    } else {
-      mobileError.textContent = "";
-      mobileError.classList.remove("error-message"); // 오류 메시지를 표시할 요소에 클래스 제거
-    }
-
-    // 사용자 정보를 객체로 만들어서 로컬 스토리지에 저장
-    localStorage.setItem("userInfo", JSON.stringify({ name: userName, mobile: userMobile }));
-
-    // 버튼에 "active" 클래스 추가
-    document.querySelector(".submit-btn").classList.add("active");
   }
+
+  // 입력란에 입력이 있을 때 사용자 정보를 저장하는 이벤트 리스너 추가
+  document.querySelectorAll(".user-info-box input").forEach(function (input) {
+    input.addEventListener("input", function () {
+      // 정보 입력 시 active 클래스 추가
+      document.querySelector(".submit-btn").classList.add("active");
+    });
+  });
+
+  // 제출 폼 이벤트 리스너
+  document.getElementById("submit-wrap").addEventListener("submit", function (e) {
+    e.preventDefault(); // 기본 제출 동작을 막습니다.
+    saveUserInfo();
+  });
 });

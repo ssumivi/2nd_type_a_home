@@ -135,75 +135,147 @@
       "centers": [
         {
           "name": "종로노인종합복지관 무악센터",
-          "value": "종로노인종합복지관 무악센터"
+          "value": "종로노인종합복지관 무악센터",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714462721007",
+          "key": "2j7fr",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "서울노인복지센터(종로)",
-          "value": "서울노인복지센터(종로)"
+          "value": "서울노인복지센터(종로)",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463174758",
+          "key": "2j7g2",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "종로노인종합복지관",
-          "value": "종로노인종합복지관"
+          "value": "종로노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463290935",
+          "key": "2j7g5",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "약수노인종합복지관",
-          "value": "약수노인종합복지관"
+          "value": "약수노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463357407",
+          "key": "2j7g9",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "청구노인복지센터",
-          "value": "청구노인복지센터"
+          "value": "청구노인복지센터",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463416694",
+          "key": "2j7ga",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "용산노인종합복지관",
-          "value": "용산노인종합복지관"
+          "value": "용산노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463465831",
+          "key": "2j7gb",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "청파노인복지관",
-          "value": "청파노인복지관"
+          "value": "청파노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463533166",
+          "key": "2j7gc",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "성동노인종합복지관",
-          "value": "성동노인종합복지관"
+          "value": "성동노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463590870",
+          "key": "2j7gg",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "왕십리도선동노인종합복지관",
-          "value": "왕십리도선동노인종합복지관"
+          "value": "왕십리도선동노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463655254",
+          "key": "2j7gh",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "사근동노인복지관",
-          "value": "사근동노인복지관"
+          "value": "사근동노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463709038",
+          "key": "2j7gi",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "성수동1가2동노인복지센터",
-          "value": "성수동1가2동노인복지센터"
+          "value": "성수동1가2동노인복지센터",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463757207",
+          "key": "2j7gj",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "광진노인종합복지관",
-          "value": "광진노인종합복지관"
+          "value": "광진노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463817350",
+          "key": "2j7gk",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "동대문노인종합복지관",
-          "value": "동대문노인종합복지관"
+          "value": "동대문노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463868278",
+          "key": "2j7gm",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "중랑노인복지관",
-          "value": "중랑노인복지관"
+          "value": "중랑노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463917231",
+          "key": "2j7gn",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "신내노노인종합복지관",
-          "value": "신내노노인종합복지관"
+          "value": "신내노노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714463970599",
+          "key": "2j7gp",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "중화경로복지관",
-          "value": "중화경로복지관"
+          "value": "중화경로복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464015127",
+          "key": "2j7gt",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "용마경로복지센터",
-          "value": "용마경로복지센터"
+          "value": "용마경로복지센터",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464062479",
+          "key": "2j7gu",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "신내경로복지센터",
-          "value": "신내경로복지센터"
+          "value": "신내경로복지센터",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464278766",
+          "key": "2j7gy",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         }
       ]
     },
@@ -212,55 +284,107 @@
       "centers": [
         {
           "name": "과천시노인복지관",
-          "value": "과천시노인복지관"
+          "value": "과천시노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464331007",
+          "key": "2j7hz",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "광주시노인복지관",
-          "value": "광주시노인복지관"
+          "value": "광주시노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464377927",
+          "key": "2j7h2",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "분당노인종합복지관",
-          "value": "분당노인종합복지관"
+          "value": "분당노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464415415",
+          "key": "2j7h3",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "수정노인종합복지관",
-          "value": "수정노인종합복지관"
+          "value": "수정노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464495623",
+          "key": "2j7h5",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "수정중앙노인종합복지관",
-          "value": "수정중앙노인종합복지관"
+          "value": "수정중앙노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464529703",
+          "key": "2j7h7",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "양평군노인복지관",
-          "value": "양평군노인복지관"
+          "value": "양평군노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464588759",
+          "key": "2j7h9",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "판교노인종합복지관",
-          "value": "판교노인종합복지관"
+          "value": "판교노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714464634007",
+          "key": "2j7hd",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "여주시노인복지관",
-          "value": "여주시노인복지관"
+          "value": "여주시노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714465308936",
+          "key": "2j7hm",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "용인시기흥노인복지관",
-          "value": "용인시기흥노인복지관"
+          "value": "용인시기흥노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714465361623",
+          "key": "2j7hn",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "용인시수지노인복지관",
-          "value": "용인시수지노인복지관"
+          "value": "용인시수지노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714465404983",
+          "key": "2j7ho",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "용인시처인노인복지관",
-          "value": "용인시처인노인복지관"
+          "value": "용인시처인노인복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714465459007",
+          "key": "2j7hp",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "이천시노인종합복지관",
-          "value": "이천시노인종합복지관"
+          "value": "이천시노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714465503183",
+          "key": "2j7hq",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "중원노인종합복지관",
-          "value": "중원노인종합복지관"
+          "value": "중원노인종합복지관",
+          "daumRoughmapContainerId": "daumRoughmapContainer1714465549207",
+          "key": "2j7hr",
+          "mapWidth": "100%",
+          "mapHeight": "100%"
         },
         {
           "name": "황송노인종합복지관",
@@ -942,8 +1066,8 @@
       ]
     },
     {
-      "location" : "제주",
-      "centers" : [
+      "location": "제주",
+      "centers": [
         {
           "name": "서귀포시노인복지관",
           "value": "서귀포시노인복지관"
@@ -967,24 +1091,24 @@
       ]
     }
   ],
-  "lecture_list" : [
+  "lecture_list": [
     {
-      "number" : "kiosk",
-      "imgSrc" : "images/kiosk.png",
-      "lecture_title" : "무인 결제대(키오스크) 사용하기",
-      "erinfo" : "카페나 음식점에서 주문을 하거나, 상점에서 물건 구매를 할 때, 결제 수단을 원활하게 사용하기 위한 무인 결제대 (키오스크) 기기 사용법을 알려줍니다."
+      "number": "kiosk",
+      "imgSrc": "images/kiosk.png",
+      "lecture_title": "무인 결제대(키오스크) 사용하기",
+      "erinfo": "카페나 음식점에서 주문을 하거나, 상점에서 물건 구매를 할 때, 결제 수단을 원활하게 사용하기 위한 무인 결제대 (키오스크) 기기 사용법을 알려줍니다."
     },
     {
-      "number" : "mobile",
-      "imgSrc" : "images/map.png",
-      "lecture_title" : "스마트폰 앱 사용하기",
-      "erinfo" : "생활 편의를 위한 앱 사용법, 교통 앱 이용 방법(버스 도착 시간 알아보기) 등을 알려줍니다."
+      "number": "mobile",
+      "imgSrc": "images/map.png",
+      "lecture_title": "스마트폰 앱 사용하기",
+      "erinfo": "생활 편의를 위한 앱 사용법, 교통 앱 이용 방법(버스 도착 시간 알아보기) 등을 알려줍니다."
     },
     {
-      "number" : "smartbank",
-      "imgSrc" : "images/mobile_bank.png",
-      "lecture_title" : "인터넷 은행(스마트 뱅킹) 사용하기",
-      "erinfo" : "인터넷 은행 및 모바일 결제에 대해 알아보고, 각종 인증서에는 무엇이 있는지, 어떻게 발급받는지 알려줍니다. 금융 사기의 유형을 알고 예방 방법을 살펴봅니다."
+      "number": "smartbank",
+      "imgSrc": "images/mobile_bank.png",
+      "lecture_title": "인터넷 은행(스마트 뱅킹) 사용하기",
+      "erinfo": "인터넷 은행 및 모바일 결제에 대해 알아보고, 각종 인증서에는 무엇이 있는지, 어떻게 발급받는지 알려줍니다. 금융 사기의 유형을 알고 예방 방법을 살펴봅니다."
     }
   ]
 }
