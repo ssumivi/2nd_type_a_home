@@ -55,7 +55,7 @@ window.addEventListener("load", function () {
             <i class="fa-solid fa-house"></i>
           </div>
           <span class="chevron"></span>
-          <span class="cate">자원봉사신청</span>
+          <span class="cate">교육봉사신청</span>
           <span class="chevron"></span>
           <span class="now-pg">${nowPg}</span>
         `;
@@ -63,4 +63,7 @@ window.addEventListener("load", function () {
   }
 
   renderPgNavi();
+
+  //  json data
+  
 });
