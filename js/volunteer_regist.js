@@ -63,4 +63,58 @@ window.addEventListener("load", function () {
   }
 
   renderPgNavi();
+
+  //지역 선택 토글 메뉴
+  this.fetch("data.json")
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      if (data && data.detail_area && data.detail_area.length > 0) {
+        AREA_SELEC = data.detail_area;
+        showAreaSelec();
+      } else {
+        console.error("No area data found.");
+      }
+    })
+    .catch(function (error) {
+      console.error("Fetch error:", error);
+    });
+
+  let AREA_SELEC;
+  let areaUlTag = this.document.getElementById("data-area-selec");
+
+  function showAreaSelec() {
+    let html = "";
+    AREA_SELEC.forEach((item, idx) => {
+      html += `
+        <li data-area = "${item.location}">${item.location}</li>
+        `;
+    });
+    areaUlTag.innerHTML = html;
+  }
+
+  // p 태그를 클릭하여 지역 선택 목록 표시/숨김
+  const areaSelec = document.getElementById("area-selec");
+  areaSelec.addEventListener("click", function () {
+    // 현재 표시 여부를 확인하여 토글
+    if (areaUlTag.classList.contains("show")) {
+      areaUlTag.classList.remove("show");
+    } else {
+      areaUlTag.classList.add("show");
+    }
+  });
+
+  // 클릭된 지역을 선택하여 해당 지역의 내용을 표시
+  areaUlTag.addEventListener("click", function (event) {
+    if (event.target.tagName === "LI") {
+      const selectedArea = event.target.dataset.area;
+    //   const carrot = document.querySelector(".fa-caret-down");
+    //   areaSelec.textContent = selectedArea + carrot;
+      areaUlTag.classList.remove("show");
+    }
+  });
 });

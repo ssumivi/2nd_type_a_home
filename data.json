@@ -986,5 +986,27 @@
       "lecture_title": "인터넷 은행(스마트 뱅킹) 사용하기",
       "erinfo": "인터넷 은행 및 모바일 결제에 대해 알아보고, 각종 인증서에는 무엇이 있는지, 어떻게 발급받는지 알려줍니다. 금융 사기의 유형을 알고 예방 방법을 살펴봅니다."
     }
+  ],
+  "detail_area": [
+    { "location": "서울" },
+    { "location": "경기동부" },
+    { "location": "경기서부" },
+    { "location": "경기중부" },
+    { "location": "경기북부" },
+    { "location": "인천" },
+    { "location": "강원" },
+    { "location": "대전" },
+    { "location": "충청북도" },
+    { "location": "충청남도" },
+    { "location": "대구" },
+    { "location": "부산" },
+    { "location": "울산" },
+    { "location": "경상북도" },
+    { "location": "경상남도" },
+    { "location": "광주" },
+    { "location": "전라북도" },
+    { "location": "전라남도" },
+    { "location": "제주" }
+  
   ]
 }
