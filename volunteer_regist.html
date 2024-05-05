@@ -42,7 +42,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
       integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer"
+    />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <!-- 기본css -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -60,17 +61,21 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
       integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 기본 js cdn -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
+    <script src="js/cheun.js"></script>
+    <!-- <script src="js/main-login.js"></script> -->
     <script src="js/volunteer_regist.js"></script>
   </head>
   <body>
     <div class="wrap">
       <!-- header -->
+      <!-- 채은영역 -->
       <div class="header-wrap .scrolled">
         <div class="header">
           <!-- 모바일메뉴 -->
@@ -80,23 +85,23 @@
           <div class="header-menuline">
             <div class="header-menu">
               <ul>
-                <li><a href="">소개</a></li>
+                <li><a href="brand.html">소개</a></li>
                 <li class="hd-menu1">
-                  <a href="">수강신청</a>
+                  <a href="#">수강신청</a>
                   <ul class="hd-menu2">
                     <li><a href="edu_list.html">교육과정찾기</a></li>
                   </ul>
                 </li>
                 <li id="volunteer-apply">
-                  <a href="">교육봉사신청</a>
+                  <a href="#">교육봉사신청</a>
                   <ul class="hd-menu3">
-                    <li><a href="volunteer.html">교육봉사등록</a></li>
+                    <li id="hdhd"><a href="volunchk.html">교육봉사등록</a></li>
+                    <li id="hd-menu33"><a href="volunteer.html">교육봉사소개</a></li>
                   </ul>
                 </li>
                 <li><a href="gesipan.html">교육자료실</a></li>
-                <li><a href="">역량수준진단</a></li>
-                <li><a href="">고객센터</a></li>
-                <li><a href="">내정보</a></li>
+                <li><a href="level.html">역량수준진단</a></li>
+                <li><a href="callct.html">고객센터</a></li>
               </ul>
             </div>
           </div>
@@ -181,6 +186,22 @@
           </div>
         </div>
       </form>
+      <!-- 하단 footer 영역 -->
+      <footer class="footer">
+        <a href="#" class="youtube-logo">
+          <img src="images/youtube_logo.png" alt="유튜브 로고" />
+        </a>
+        <div class="footer-wrap">
+          <a href="index.html" class="ft-logo">
+            <img src="images/main_logo_w.png" alt="하단홈페이지로고" />
+          </a>
+          <a href="#">이용약관 및 위치정보서비스</a>
+          <a href="#"><b>개인정보처리방침</b></a>
+          <a href="#">저작권보호정책</a>
+          <a href="#">고객센터</a>
+        </div>
+        <p class="copy">COPYRIGHT © 2024 이서아 김수민 탁채은. ALL RIGHTS RESERVED.</p>
+      </footer>
     </div>
   </body>
 </html>
