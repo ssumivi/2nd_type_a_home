@@ -62,9 +62,14 @@ $(document).ready(function () {
     lectureSlide.html(html);
   }
 
+  let spaceBetweenValue = 35; // 기본 값
+  if (window.innerWidth <= 340) {
+    spaceBetweenValue = 15; // 해상도가 340px 이하일 때
+  }
+
   let swLecture = new Swiper(".sw-enrol", {
     slidesPerView: 1.2,
-    spaceBetween: 35,
+    spaceBetween: spaceBetweenValue,
     centeredSlides: true,
     allowTouchMove: false,
   });
@@ -109,11 +114,13 @@ $(document).ready(function () {
 
   $(".regist-btn").on("click", function (e) {
     // e.preventDefault();
-    if (confirm("교육봉사 기록관리를 위한 회원가입이 필요합니다. 회원가입 페이지로 이동하시겠습니까?")) {
-        window.location.href = "join.html"; // 여기에 회원가입 페이지 URL을 넣어주세요
+    if (
+      confirm("교육봉사 기록관리를 위한 회원가입이 필요합니다. 회원가입 페이지로 이동하시겠습니까?")
+    ) {
+      window.location.href = "join.html"; // 여기에 회원가입 페이지 URL을 넣어주세요
     } else {
-        alert("계속하여 자원봉사 기록을 관리하려면 회원가입이 필요합니다.");
+      alert("비회원으로 교육봉사신청을 진행합니다.");
+      window.location.href = "volunteer_regist.html";
     }
-});
-
+  });
 });

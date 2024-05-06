@@ -131,3 +131,75 @@
   color: #959595;
   width: 15%;
 } */
+/* 반응형 */
+@media screen and (max-width: 980px) {
+  .inner {
+    max-width: 860px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    max-width: 680px;
+  }
+  .enrol-box {
+    padding: 50px;
+  }
+  .sub-info {
+    line-height: 1.24;
+  }
+}
+@media screen and (max-width: 440px) {
+  .inner {
+    max-width: 360px;
+  }
+  #submit-wrap .inner {
+    padding-top: 0;
+  }
+  .enrol-box {
+    padding: 35px;
+    word-break: keep-all;
+    line-height: 1.24;
+  }
+  .enrol-info {
+    width: 100%;
+    margin: 25px auto;
+    padding: 25px;
+  }
+  .input-bg {
+    padding: 65px 25px;
+    line-height: 1.24;
+  }
+  .sub-title {
+    margin-bottom: 25px;
+  }
+  .input-box label {
+    text-align: left;
+  }
+  .input-box input {
+    width: calc(100% / 4 * 2);
+    height: 7.5vw;
+    margin: 0;
+  }
+  .submit-btn{
+    padding: 19px;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 340px){
+  .inner {
+    max-width: 300px;
+  }
+  .enrol-box{
+    padding: 25px 15px;
+  }
+  .input-bg{
+    padding: 55px 15px;
+  }
+  .input-box input{
+    height: 8.5vw;
+    padding: 0 15px;
+  }
+  .submit-btn{
+    width: 45vw;
+  }
+}

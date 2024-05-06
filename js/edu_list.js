@@ -299,7 +299,11 @@ window.addEventListener("load", function () {
 
       // 중복된 값을 방지하기 위해 이미 저장된 데이터와 비교합니다.
       const isDuplicate = storedData.some((item) => {
-        return item.dataValue === newData.dataValue && item.areaValue === newData.areaValue && item.centerValue === newData.centerValue;
+        return (
+          item.dataValue === newData.dataValue &&
+          item.areaValue === newData.areaValue &&
+          item.centerValue === newData.centerValue
+        );
       });
 
       // 중복된 값이 아닌 경우에만 데이터를 저장합니다.
@@ -307,6 +311,22 @@ window.addEventListener("load", function () {
         storedData.push(newData);
         localStorage.setItem("clickedValues", JSON.stringify(storedData));
       }
+    }
+  });
+  const closeAreaToggle = document.querySelector(".area-modal-close");
+  const mobilePopup = document.querySelector(".mobile-popup");
+  const body = document.body;
+
+  // 해상도가 940px 이하일 때만 스크롤 막기
+  if (window.innerWidth <= 940) {
+    body.style.overflow = "hidden"; // 스크롤 막기
+  }
+
+  closeAreaToggle.addEventListener("click", function () {
+    mobilePopup.style.display = "none";
+    // 해상도가 940px 이하일 때만 스크롤 다시 활성화
+    if (window.innerWidth <= 940) {
+      body.style.overflow = "auto"; // 스크롤 다시 활성화
     }
   });
 });

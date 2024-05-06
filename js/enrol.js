@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
       }
       if (latestEnrol) {
         html += `
-          <li class="enrol-info-li">희망하신 강의는 <b>${latestEnrol}</b> 입니다.</li>
+          <li class="enrol-info-li">희망하신 강의는 <br class = "no-br"> <b>${latestEnrol}</b> 입니다.</li>
         `;
       }
 
