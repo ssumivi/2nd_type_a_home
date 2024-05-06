@@ -71,11 +71,12 @@
   .regist-tutor .inner{
     padding-top: 0;
   }
-  .box-title{
+  .area-selector .box-title{
     word-break: keep-all;
+    margin-bottom: 10%;
   }
   .area-selector{
-    padding: 5% 25px;
+    padding: 15% 25px;
   }
   .area-selec{
     width: 100%;
