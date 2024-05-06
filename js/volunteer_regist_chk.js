@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
     if (latestInfo.volunname) {
       html += `
         <li class="info-box-li">
-            <p class="chk-info-title">교육봉사자 성함</p>
+            <p class="chk-info-title">성함</p>
             <p id="name-info" class="chk-info-data">${latestInfo.volunname}</p>
         </li>
       `;
@@ -41,7 +41,7 @@ window.addEventListener("load", function () {
     if (latestInfo.volunmobile) {
       html += `
         <li class="info-box-li">
-            <p class="chk-info-title">교육봉사자 연락처</p>
+            <p class="chk-info-title">연락처</p>
             <p id="mobile-info" class="chk-info-data">${latestInfo.volunmobile}</p>
         </li>
       `;

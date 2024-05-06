@@ -2,7 +2,6 @@
 @import url(font.css);
 @import url(all.css);
 
-
 .top-banner {
   position: relative;
   width: 100%;
@@ -256,6 +255,9 @@
 .area-modal-close {
   display: none;
 }
+.no-br {
+  display: none;
+}
 /* ��YAACu */
 @media screen and (max-width: 1220px) {
   html {
@@ -347,5 +349,76 @@
     margin: 18px auto 12px;
     text-align: center;
   }
-
+  .enroll-info-left {
+    width: 40%;
+  }
+  .enroll-info-right {
+    width: 60%;
+  }
+  .study-info {
+    word-break: keep-all;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    max-width: 640px;
+  }
+  .no-br {
+    display: block;
+  }
+  .enroll-select .inner {
+    padding-top: 0;
+  }
+  .enroll-info-left {
+    display: none;
+  }
+  .enroll-info-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 440px) {
+  html {
+    font-size: 9px;
+  }
+  .inner {
+    max-width: 360px;
+  }
+  .top-banner {
+    height: 70vw;
+  }
+  .banner-txt {
+    top: 56%;
+  }
+  .pg-navi .inner {
+    padding-top: 5%;
+  }
+  .mobile-menu-title {
+    height: 17%;
+  }
+  .center-select .inner {
+    padding-top: 0;
+  }
+  .enroll-info-right {
+    padding: 35px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .inner {
+    max-width: 300px;
+  }
+  .top-banner {
+    height: 80vw;
+  }
+  .erinfo-title {
+    word-break: keep-all;
+    text-align: center;
+  }
+  .submit-bt,
+  .review-bt {
+    width: calc(100% / 2 - 6px);
+    padding: 10px;
+  }
+  .area-modal-close {
+    width: 45%;
+  }
 }

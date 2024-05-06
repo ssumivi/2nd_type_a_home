@@ -73,6 +73,20 @@
     <script src="js/cheun.js"></script>
     <script src="js/main-login.js"></script>
     <script src="js/volunteer_regist_chk.js"></script>
+    <style>
+      .mb-block{
+        display: none;
+      }
+      @media screen and (max-width: 500px) {
+        .chk-title{
+          font-size: 2.45rem;
+          text-align: center;
+        }
+        .mb-block{
+          display: block;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="wrap">
@@ -165,7 +179,7 @@
                 fill="#80BCBD"
               />
             </svg>
-            <h2 class="chk-title">교육봉사자 신청이 완료되었습니다!</h2>
+            <h2 class="chk-title">교육봉사자 신청이<br class="mb-block"> 완료되었습니다!</h2>
           </div>
 
           <div class="enrol-chk-bg">
