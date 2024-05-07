@@ -172,7 +172,7 @@ video::-webkit-media-controls-fullscreen-button {
   padding: 15px 0;
   margin: auto;
 }
-.br-340{
+.br-440 {
   display: none;
 }
 @media screen and (max-width: 1280px) {
@@ -206,10 +206,12 @@ video::-webkit-media-controls-fullscreen-button {
     max-width: 690px;
   }
   .top-banner {
-    height: 450px;
+    height: 320px;
   }
   .banner-txt {
-    top: 60%;
+    top: 55%;
+    word-break: keep-all;
+    width: 85%;
   }
   .intro-info-tit {
     max-width: 100%;
@@ -233,78 +235,104 @@ video::-webkit-media-controls-fullscreen-button {
   }
 }
 @media screen and (max-width: 440px) {
-  .inner{
+  .inner {
     max-width: 420px;
   }
-  .top-banner{
+  .top-banner {
     height: 320px;
   }
-  .banner-txt{
-    top: 55%;
+  .banner-txt {
+    top: 50%;
   }
   .intro-ul li img {
     width: 75px;
     height: 75px;
   }
-  .intro-info-tit{
+  .intro-info-tit {
     line-height: 1.24;
     margin-bottom: 15px;
   }
+  .intro-ul {
+    flex-direction: column;
+    gap: 45px;
+  }
+  .intro-ul li {
+    width: 100%;
+    gap: 15px;
+  }
   .sw-enrol .enroll-list-li {
     margin-bottom: 15%;
-    height: 59vw;
+    height: 74vw;
   }
-  .enroll-info-right{
+  .enroll-info-right {
     padding: 45px 35px;
   }
-  .sw-enrol-next, .sw-enrol-prev{
+  .sw-enrol-next,
+  .sw-enrol-prev {
     width: 32px;
     height: 32px;
     line-height: 32px;
   }
-  .regist-info{
+  .regist-info {
     font-size: 2rem;
+    word-break: keep-all;
+    margin-bottom: 35px;
   }
-  .regist-btn{
-    font-size: 1.95rem;
+  .br-440 {
+    display: block;
+  }
+  .regist-sub {
+    line-height: 1.24;
+  }
+  .regist-btn {
+    width: 65%;
+    margin-top: 35px;
+    font-size: 1.7rem;
   }
 }
-@media screen and (max-width: 340px){
-  .inner{
+@media screen and (max-width: 340px) {
+  .inner {
     max-width: 300px;
   }
-  .enrol-intro .inner{
+  .title {
+    font-size: 2rem;
+  }
+  .enrol-intro .inner {
     padding-top: 96px;
   }
-  .intro-ul{
+  .intro-ul {
     width: 100%;
+    gap: 75px;
   }
   .intro-ul li img {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
   }
-  .intro-info{
-    word-break: break-all;
+  .sw-enrol .erinfo-title {
+    word-break: keep-all;
+    height: 15vw;
+  }
+  .erinfo{
+    text-align: center;
+  }
+  .erinfo-subtitle {
+    display: none;
   }
   .sw-enrol .enroll-list-li {
     margin-bottom: 15%;
-    height: 90vw;
+    height: 99vw;
   }
-  .enroll-info-right{
+  .enroll-info-right {
     padding: 35px 20px;
   }
-  .br-340{
-    display: block;
-  }
-  .regist-info{
-    margin-bottom: 8%;
+  .regist-info {
+    font-size: 1.89rem;
+    margin-bottom: 12%;
     word-break: keep-all;
   }
-  .regist-sub{
-    line-height: 1.24;
-  }
-  .regist-btn{
-    width: 85%;
-    margin-top: 8%;
+
+  .regist-btn {
+    width: 100%;
+    margin-top: 12%;
   }
 }

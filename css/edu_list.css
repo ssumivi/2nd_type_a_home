@@ -42,6 +42,7 @@
   align-items: center;
   gap: 15px;
   padding-top: 2%;
+  font-size: 1.2rem;
 }
 .chevron {
   position: relative;
@@ -377,9 +378,6 @@
   }
 }
 @media screen and (max-width: 440px) {
-  html {
-    font-size: 9px;
-  }
   .inner {
     max-width: 360px;
   }
@@ -401,23 +399,40 @@
   .enroll-info-right {
     padding: 35px;
   }
-}
-@media screen and (max-width: 340px) {
-  .inner {
-    max-width: 300px;
-  }
-  .top-banner {
-    height: 80vw;
-  }
   .erinfo-title {
     word-break: keep-all;
-    text-align: center;
+    line-height: 1.24;
   }
   .submit-bt,
   .review-bt {
     width: calc(100% / 2 - 6px);
     padding: 10px;
   }
+  .area-modal-close {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .top-banner {
+    height: 300px;
+  }
+  .banner-txt{
+    top: 48%;
+    word-break: keep-all;
+  }
+}
+@media screen and (max-width: 340px) {
+  .inner {
+    max-width: 300px;
+  }
+  .top-banner {
+    height: 95vw;
+  }
+  .erinfo-title {
+    word-break: keep-all;
+    text-align: center;
+  }
+
   .area-modal-close {
     width: 45%;
   }

@@ -120,6 +120,9 @@
   margin-top: 5px; /* 오류 메시지와 입력란 사이의 간격 설정 */
   /* background-color: brown; */
 }
+.b-320 {
+  display: none;
+}
 /* #user-chk{
   width: 18px;
   height: 18px;
@@ -169,37 +172,52 @@
     padding: 65px 25px;
     line-height: 1.24;
   }
+  .box-title {
+    font-size: 2.3rem;
+  }
   .sub-title {
     margin-bottom: 25px;
+    font-size: 1.56rem;
   }
   .input-box label {
     text-align: left;
   }
   .input-box input {
-    width: calc(100% / 4 * 2);
-    height: 7.5vw;
+    width: calc(100% / 4 * 2.5);
+    height: 10.5vw;
     margin: 0;
   }
-  .submit-btn{
-    padding: 19px;
+  .submit-btn {
+    padding: 10px;
     border-radius: 20px;
+    width: 45vw;
   }
 }
-@media screen and (max-width: 340px){
+@media screen and (max-width: 340px) {
   .inner {
     max-width: 300px;
   }
-  .enrol-box{
+  .enrol-box {
     padding: 25px 15px;
   }
-  .input-bg{
+  .box-title {
+    word-break: keep-all;
+  }
+  .b-320{
+    display: block;
+  }
+  .sub-title{
+    line-height: 1.24;
+    margin: 35px 0;
+  }
+  .input-bg {
     padding: 55px 15px;
   }
-  .input-box input{
-    height: 8.5vw;
+  .input-box input {
+    height: 11.5vw;
     padding: 0 15px;
   }
-  .submit-btn{
-    width: 45vw;
+  .submit-btn {
+    width: 52vw;
   }
 }

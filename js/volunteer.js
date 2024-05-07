@@ -63,7 +63,7 @@ $(document).ready(function () {
   }
 
   let spaceBetweenValue = 35; // 기본 값
-  if (window.innerWidth <= 340) {
+  if (window.innerWidth <= 440) {
     spaceBetweenValue = 15; // 해상도가 340px 이하일 때
   }
 

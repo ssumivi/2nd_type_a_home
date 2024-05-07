@@ -42,8 +42,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
       integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <!-- 기본css -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -63,8 +62,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
       integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+      referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 기본 js cdn -->
     <script src="js/html5shiv.js"></script>
@@ -74,15 +72,24 @@
     <script src="js/main-login.js"></script>
     <script src="js/volunteer_regist_chk.js"></script>
     <style>
-      .mb-block{
+      .mb-block {
         display: none;
       }
       @media screen and (max-width: 500px) {
-        .chk-title{
-          font-size: 2.45rem;
+        .chk-title {
+          position: relative;
           text-align: center;
+          padding-top: 45px;
         }
-        .mb-block{
+        .title-box svg {
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .mb-block {
           display: block;
         }
       }
@@ -176,10 +183,12 @@
             <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M40 7.5C48.6195 7.5 56.886 10.9241 62.981 17.019C69.0759 23.114 72.5 31.3805 72.5 40C72.5 48.6195 69.0759 56.886 62.981 62.981C56.886 69.0759 48.6195 72.5 40 72.5C31.3805 72.5 23.114 69.0759 17.019 62.981C10.9241 56.886 7.5 48.6195 7.5 40C7.5 31.3805 10.9241 23.114 17.019 17.019C23.114 10.9241 31.3805 7.5 40 7.5ZM40 80C50.6087 80 60.7828 75.7857 68.2843 68.2843C75.7857 60.7828 80 50.6087 80 40C80 29.3913 75.7857 19.2172 68.2843 11.7157C60.7828 4.21427 50.6087 0 40 0C29.3913 0 19.2172 4.21427 11.7157 11.7157C4.21427 19.2172 0 29.3913 0 40C0 50.6087 4.21427 60.7828 11.7157 68.2843C19.2172 75.7857 29.3913 80 40 80ZM57.6562 32.6562C59.125 31.1875 59.125 28.8125 57.6562 27.3594C56.1875 25.9063 53.8125 25.8906 52.3594 27.3594L35.0156 44.7031L27.6719 37.3594C26.2031 35.8906 23.8281 35.8906 22.375 37.3594C20.9219 38.8281 20.9062 41.2031 22.375 42.6562L32.375 52.6562C33.8437 54.125 36.2188 54.125 37.6719 52.6562L57.6562 32.6562Z"
-                fill="#80BCBD"
-              />
+                fill="#80BCBD" />
             </svg>
-            <h2 class="chk-title">교육봉사자 신청이<br class="mb-block"> 완료되었습니다!</h2>
+            <h2 class="chk-title">
+              교육봉사자 신청이<br class="mb-block" />
+              완료되었습니다!
+            </h2>
           </div>
 
           <div class="enrol-chk-bg">
