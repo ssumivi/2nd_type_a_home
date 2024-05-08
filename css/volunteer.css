@@ -236,7 +236,7 @@ video::-webkit-media-controls-fullscreen-button {
 }
 @media screen and (max-width: 440px) {
   .inner {
-    max-width: 420px;
+    max-width: 360px;
   }
   .top-banner {
     height: 320px;
@@ -292,7 +292,7 @@ video::-webkit-media-controls-fullscreen-button {
     line-height: 1.24;
   }
   .regist-btn {
-    width: 65%;
+    width: 80%;
     margin-top: 35px;
     font-size: 1.7rem;
   }
@@ -304,12 +304,23 @@ video::-webkit-media-controls-fullscreen-button {
   }
 }
 @media screen and (max-width: 360px) {
+  .inner{
+    max-width: 320px;
+  }
+  .title{
+    font-size: 2.2rem;
+  }
   .sw-enrol .enroll-list-li {
-    margin-bottom: 15%;
+    margin-bottom: 20%;
     height: 80vw;
   }
   .enroll-info-right {
     padding: 25px;
+  }
+  .regist-btn {
+    width: 100%;
+    margin-top: 35px;
+    font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 350px) {
