@@ -260,9 +260,12 @@ video::-webkit-media-controls-fullscreen-button {
     width: 100%;
     gap: 15px;
   }
+  .erinfo-subtitle {
+    display: none;
+  }
   .sw-enrol .enroll-list-li {
     margin-bottom: 15%;
-    height: 74vw;
+    height: 75vw;
   }
   .enroll-info-right {
     padding: 45px 35px;
@@ -290,6 +293,27 @@ video::-webkit-media-controls-fullscreen-button {
     font-size: 1.7rem;
   }
 }
+@media screen and (max-width: 390px){
+  .sw-enrol .enroll-list-li {
+    margin-bottom: 15%;
+    height: 80vw;
+  }
+}
+@media screen and (max-width: 360px){
+  .sw-enrol .enroll-list-li {
+    margin-bottom: 15%;
+    height: 80vw;
+  }
+  .enroll-info-right{
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .sw-enrol .enroll-list-li {
+    margin-bottom: 15%;
+    height: 85vw;
+  }
+}
 @media screen and (max-width: 340px) {
   .inner {
     max-width: 300px;
@@ -315,12 +339,10 @@ video::-webkit-media-controls-fullscreen-button {
   .erinfo{
     text-align: center;
   }
-  .erinfo-subtitle {
-    display: none;
-  }
+
   .sw-enrol .enroll-list-li {
-    margin-bottom: 15%;
-    height: 99vw;
+    margin-bottom: 20%;
+    height: 90vw;
   }
   .enroll-info-right {
     padding: 35px 20px;
