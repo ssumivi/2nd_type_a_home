@@ -4,52 +4,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
     listItems.forEach(function(item, index) {
         item.addEventListener("click", function() {
-            // µÎ ¹øÂ° ¿ä¼Ò´Â È¸¿ø°¡ÀÔÀÌ¹Ç·Î µÎ ¹øÂ° ¿ä¼Ò¸¦ Å¬¸¯ÇßÀ» ¶§¸¸ Ã³¸®
+            // ë‘ ë²ˆì§¸ ìš”ì†ŒëŠ” íšŒì›ê°€ì…ì´ë¯€ë¡œ ë‘ ë²ˆì§¸ ìš”ì†Œë¥¼ í´ë¦­í–ˆì„ ë•Œë§Œ ì²˜ë¦¬
             if (index === 1) {
-                window.location.href = "login.html"; // µÎ ¹øÂ° li¸¦ Å¬¸¯ÇÏ¸é login.html·Î ÀÌµ¿
+                window.location.href = "login.html"; // ë‘ ë²ˆì§¸ lië¥¼ í´ë¦­í•˜ë©´ login.htmlë¡œ ì´ë™
             } else if (index === 2) {
-                window.location.href = "join.html"; // ¼¼ ¹øÂ° li¸¦ Å¬¸¯ÇÏ¸é join.html·Î ÀÌµ¿
+                window.location.href = "join.html"; // ì„¸ ë²ˆì§¸ lië¥¼ í´ë¦­í•˜ë©´ join.htmlë¡œ ì´ë™
             }
         });
     });
 });
 // ========================================================================
 $(document).ready(function() {
-    $('#login_Btn').click(function() { // ·Î±×ÀÎ ¹öÆ°¿¡ ´ëÇÑ Å¬¸¯ ÀÌº¥Æ® ¹ÙÀÎµù
-        const id = $('#login-Id').val(); // ÇÊµå ¾ÆÀÌµğ °ª °¡Á®¿À±â
-        const pw = $('#login-Pwd').val(); // ÇÊµå ºñ¹Ğ¹øÈ£ °ª °¡Á®¿À±â
+    $('#login_Btn').click(function() { // ë¡œê·¸ì¸ ë²„íŠ¼ì— ëŒ€í•œ í´ë¦­ ì´ë²¤íŠ¸ ë°”ì¸ë”©
+        const id = $('#login-Id').val(); // í•„ë“œ ì•„ì´ë”” ê°’ ê°€ì ¸ì˜¤ê¸°
+        const pw = $('#login-Pwd').val(); // í•„ë“œ ë¹„ë°€ë²ˆí˜¸ ê°’ ê°€ì ¸ì˜¤ê¸°
 
-        const storedPw = localStorage.getItem(id); // ÇÊµå ¾ÆÀÌµğ °ªÀ» Åä´ë·Î ÀúÀåµÈ ºñ¹Ğ¹øÈ£ °¡Á®¿À±â
+        const storedPw = localStorage.getItem(id); // í•„ë“œ ì•„ì´ë”” ê°’ì„ í† ëŒ€ë¡œ ì €ì¥ëœ ë¹„ë°€ë²ˆí˜¸ ê°€ì ¸ì˜¤ê¸°
 
         if(!id || !pw) {
-            alert('¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ ¸ğµÎ ÀÔ·ÂÇØÁÖ¼¼¿ä.');
+            alert('ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ëª¨ë‘ ì…ë ¥í•´ì£¼ì„¸ìš”.');
         } else if(pw === storedPw) {
-            alert('·Î±×ÀÎ ¼º°ø');
+            alert('ë¡œê·¸ì¸ ì„±ê³µ');
             localStorage.setItem("isLoggedIn", true);
-            $(location).attr('href' , 'index.html'); // ·Î±×ÀÎ ¼º°ø ÆäÀÌÁö·Î ÀÌµ¿
+            $(location).attr('href' , 'index.html'); // ë¡œê·¸ì¸ ì„±ê³µ í˜ì´ì§€ë¡œ ì´ë™
         } else {
-            alert('¾ÆÀÌµğ ¶Ç´Â ºñ¹Ğ¹øÈ£°¡ Àß¸øµÇ¾ú½À´Ï´Ù.');
+            alert('ì•„ì´ë”” ë˜ëŠ” ë¹„ë°€ë²ˆí˜¸ê°€ ì˜ëª»ë˜ì—ˆìŠµë‹ˆë‹¤.');
         }
     });
 
-    // È¸¿ø°¡ÀÔ ÆäÀÌÁö·Î ÀÌµ¿ÇÏ´Â ÀÌº¥Æ® ¹öÆ°
+    // íšŒì›ê°€ì… í˜ì´ì§€ë¡œ ì´ë™í•˜ëŠ” ì´ë²¤íŠ¸ ë²„íŠ¼
     $('#signUp_Btn').click(function() {
         $(location).attr('href' , 'signUp.html');
     });
 });
 // ==========================================================================
 // document.addEventListener("DOMContentLoaded", function() {
-//     // ·Î±×ÀÎ ¹öÆ° Å¬¸¯ ½Ã
+//     // ë¡œê·¸ì¸ ë²„íŠ¼ í´ë¦­ ì‹œ
 //     document.getElementById("login_Btn").addEventListener("click", function() {
-//         // ·Î±×ÀÎ ¼º°ø ½ÃÀÇ ÀÛ¾÷
+//         // ë¡œê·¸ì¸ ì„±ê³µ ì‹œì˜ ì‘ì—…
 //         // ...
 
-//         // ·Î±×ÀÎ ¼º°ø ½Ã ·ÎÄÃ ½ºÅä¸®Áö¿¡ ·Î±×ÀÎ »óÅÂ ÀúÀå
+//         // ë¡œê·¸ì¸ ì„±ê³µ ì‹œ ë¡œì»¬ ìŠ¤í† ë¦¬ì§€ì— ë¡œê·¸ì¸ ìƒíƒœ ì €ì¥
         
-//         // ·Î±×ÀÎ ¼º°ø ½ÃÀÇ Ãß°¡ ÀÛ¾÷ (¿¹: À¯Àú³×ÀÓ ÀúÀå µî)
+//         // ë¡œê·¸ì¸ ì„±ê³µ ì‹œì˜ ì¶”ê°€ ì‘ì—… (ì˜ˆ: ìœ ì €ë„¤ì„ ì €ì¥ ë“±)
 //         // ...
 
-//         // main.html·Î ÀÌµ¿
+//         // main.htmlë¡œ ì´ë™
 //         window.location.href = "index.html";
 //     });
 // });

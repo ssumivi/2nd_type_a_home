@@ -1,42 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // UI ¾÷µ¥ÀÌÆ® ÇÔ¼ö
-    function updateUI() {
-        var isLoggedIn = localStorage.getItem("isLoggedIn");
+document.addEventListener("DOMContentLoaded", function () {
+  // UI ì—…ë°ì´íŠ¸ í•¨ìˆ˜
+  function updateUI() {
+    var isLoggedIn = localStorage.getItem("isLoggedIn");
 
-        if (isLoggedIn) {
-            // ·Î±×ÀÎ »óÅÂÀÏ ¶§
-            document.getElementById("login-section").style.display = "none";
-            document.getElementById("dashboard-section").style.display = "block";
-            document.getElementById("signup-section").style.display = "none";
+    if (isLoggedIn) {
+      // ë¡œê·¸ì¸ ìƒíƒœì¼ ë•Œ
+      document.getElementById("login-section").style.display = "none";
+      document.getElementById("dashboard-section").style.display = "block";
+      document.getElementById("signup-section").style.display = "none";
 
-            // À¯Àú³×ÀÓ Ç¥½Ã
-            var username = localStorage.getItem("username");
-        } else {
-            // ·Î±×¾Æ¿ô »óÅÂÀÏ ¶§
-            document.getElementById("login-section").style.display = "block";
-            document.getElementById("dashboard-section").style.display = "none";
-            document.getElementById("signup-section").style.display = "block";
-        }
+      // ìœ ì €ë„¤ì„ í‘œì‹œ
+      var username = localStorage.getItem("username");
+    } else {
+      // ë¡œê·¸ì•„ì›ƒ ìƒíƒœì¼ ë•Œ
+      document.getElementById("login-section").style.display = "block";
+      document.getElementById("dashboard-section").style.display = "none";
+      document.getElementById("signup-section").style.display = "block";
     }
+  }
 
-    // ÆäÀÌÁö ·Îµå ½Ã UI ¾÷µ¥ÀÌÆ®
+  // í˜ì´ì§€ ë¡œë“œ ì‹œ UI ì—…ë°ì´íŠ¸
+  updateUI();
+
+  // ë¡œê·¸ì¸ ë²„íŠ¼ í´ë¦­ ì‹œ
+  document.getElementById("login-button").addEventListener("click", function () {
+    // UI ì—…ë°ì´íŠ¸
+    // localStorage.setItem("isLoggedIn", true);
     updateUI();
+  });
 
-    // ·Î±×ÀÎ ¹öÆ° Å¬¸¯ ½Ã
-    document.getElementById("login-button").addEventListener("click", function() {
+  // ë¡œê·¸ì•„ì›ƒ ë²„íŠ¼ í´ë¦­ ì‹œ
+  document.getElementById("logout-button").addEventListener("click", function () {
+    // ë¡œê·¸ì•„ì›ƒ í›„ì˜ ì¶”ê°€ ì‘ì—… (ì˜ˆ: ìœ ì €ë„¤ì„ ì œê±° ë“±)
+    // ...
 
-        // UI ¾÷µ¥ÀÌÆ®
-        // localStorage.setItem("isLoggedIn", true);
-        updateUI();
-    });
-
-    // ·Î±×¾Æ¿ô ¹öÆ° Å¬¸¯ ½Ã
-    document.getElementById("logout-button").addEventListener("click", function() {
-        // ·Î±×¾Æ¿ô ÈÄÀÇ Ãß°¡ ÀÛ¾÷ (¿¹: À¯Àú³×ÀÓ Á¦°Å µî)
-        // ...
-
-        // UI ¾÷µ¥ÀÌÆ®
-        localStorage.removeItem("isLoggedIn");
-        updateUI();
-    });
+    // UI ì—…ë°ì´íŠ¸
+    localStorage.removeItem("isLoggedIn");
+    updateUI();
+  });
 });

@@ -4,70 +4,70 @@ document.addEventListener("DOMContentLoaded", function() {
 
     listItems.forEach(function(item, index) {
         item.addEventListener("click", function() {
-            // µÎ ¹øÂ° ¿ä¼Ò´Â È¸¿ø°¡ÀÔÀÌ¹Ç·Î µÎ ¹øÂ° ¿ä¼Ò¸¦ Å¬¸¯ÇßÀ» ¶§¸¸ Ã³¸®
+            // ë‘ ë²ˆì§¸ ìš”ì†ŒëŠ” íšŒì›ê°€ì…ì´ë¯€ë¡œ ë‘ ë²ˆì§¸ ìš”ì†Œë¥¼ í´ë¦­í–ˆì„ ë•Œë§Œ ì²˜ë¦¬
             if (index === 1) {
-                window.location.href = "login.html"; // µÎ ¹øÂ° li¸¦ Å¬¸¯ÇÏ¸é login.html·Î ÀÌµ¿
+                window.location.href = "login.html"; // ë‘ ë²ˆì§¸ lië¥¼ í´ë¦­í•˜ë©´ login.htmlë¡œ ì´ë™
                 
             } else if (index === 2) {
-                window.location.href = "join.html"; // ¼¼ ¹øÂ° li¸¦ Å¬¸¯ÇÏ¸é join.html·Î ÀÌµ¿
+                window.location.href = "join.html"; // ì„¸ ë²ˆì§¸ lië¥¼ í´ë¦­í•˜ë©´ join.htmlë¡œ ì´ë™
             }
         });
     });
 });
 //   ============================================================================================
 $(document).ready(function() {
-    //Áßº¹ È®ÀÎ ¿©ºÎ ÃßÀû
+    //ì¤‘ë³µ í™•ì¸ ì—¬ë¶€ ì¶”ì 
     var isIdChecked = false;
-    // Áßº¹ È®ÀÎ °á°ú ÀúÀå (true: »ç¿ë °¡´É , false: »ç¿ë ºÒ°¡)
+    // ì¤‘ë³µ í™•ì¸ ê²°ê³¼ ì €ì¥ (true: ì‚¬ìš© ê°€ëŠ¥ , false: ì‚¬ìš© ë¶ˆê°€)
     var isIdAvailable = false;
 
-    //È¸¿ø°¡ÀÔ ÇÔ¼ö
+    //íšŒì›ê°€ì… í•¨ìˆ˜
     function signUp() {
         const id = $('#signUp-Id').val();
         const pw = $('#signUp-Pwd').val();
-        // Áßº¹ È®ÀÎÀ» ÇÏÁö ¾Ê¾Ò°Å³ª, ¾ÆÀÌµğ°¡ »ç¿ë ºÒ°¡ÀÏ °æ¿ì
+        // ì¤‘ë³µ í™•ì¸ì„ í•˜ì§€ ì•Šì•˜ê±°ë‚˜, ì•„ì´ë””ê°€ ì‚¬ìš© ë¶ˆê°€ì¼ ê²½ìš°
         if(!isIdChecked || !isIdAvailable) {
-            alert('¾ÆÀÌµğ Áßº¹ È®ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.');
+            alert('ì•„ì´ë”” ì¤‘ë³µ í™•ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.');
             return;
         }
         if (!id || !pw){
-            alert('¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ ¸ğµÎ ÀÔ·ÂÇØÁÖ¼¼¿ä.');
+            alert('ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ëª¨ë‘ ì…ë ¥í•´ì£¼ì„¸ìš”.');
             return;
         }
         localStorage.setItem(id, pw);
-        alert('È¸¿ø°¡ÀÔ');
-        $(location).attr('href' , 'login.html'); // ·Î±×ÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+        alert('íšŒì›ê°€ì…');
+        $(location).attr('href' , 'login.html'); // ë¡œê·¸ì¸ í˜ì´ì§€ë¡œ ì´ë™
     }
     
-    //ID Áßº¹ È®ÀÎ ÇÔ¼ö
+    //ID ì¤‘ë³µ í™•ì¸ í•¨ìˆ˜
     function double_Check() {
         const id = $('#signUp-Id').val();
         if(!id) {
-            alert('¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.');
+            alert('ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”.');
             isIdChecked = false;
             return;
         }
         if(localStorage.getItem(id) !== null) {
-            alert('ÀÌ¹Ì Á¸ÀçÇÏ´Â IDÀÔ´Ï´Ù.');
+            alert('ì´ë¯¸ ì¡´ì¬í•˜ëŠ” IDì…ë‹ˆë‹¤.');
             isIdAvailable = false;
         } else {
-            alert('»ç¿ë °¡´ÉÇÑ ¾ÆÀÌµğ ÀÔ´Ï´Ù.');
+            alert('ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë”” ì…ë‹ˆë‹¤.');
             isIdAvailable = true;
         }
         isIdChecked = true;
     }
 
-    // È¸¿ø°¡ÀÔ ¹öÆ° Å¬¸¯ ÀÌº¥Æ®
+    // íšŒì›ê°€ì… ë²„íŠ¼ í´ë¦­ ì´ë²¤íŠ¸
     $('#signUp_Btn').click(function() {
         signUp();
     });
 
-    // Áßº¹ È®ÀÎ ¹öÆ° Å¬¸¯ ÀÌº¥Æ®
+    // ì¤‘ë³µ í™•ì¸ ë²„íŠ¼ í´ë¦­ ì´ë²¤íŠ¸
     $('#double_Check_Btn').click(function() {
         double_Check();
     });
 
-    // ·Î±×ÀÎ ÆäÀÌÁö·Î ÀÌµ¿ Å¬¸¯ ÀÌº¥Æ®
+    // ë¡œê·¸ì¸ í˜ì´ì§€ë¡œ ì´ë™ í´ë¦­ ì´ë²¤íŠ¸
     $('#login_Btn').click(function() {
         $(location).attr('href' , 'login.html');
     });

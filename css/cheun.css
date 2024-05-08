@@ -19,20 +19,41 @@
   }
   
   /* 스크롤 내렸을 때 블러 효과 적용 */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
-
+  /* 초기 상태 설정 */
+  .header-menu ul ul {
+    opacity: 0;
+    transform: translateY(-20px);
+    display: none;
+  }
+  
+  /* 활성화 상태 설정 */
+  .header-menu ul ul.active {
+    display: block;
+    animation: slideDown 0.3s ease forwards;
+  }
 /* 모바일메뉴 */
 .mbt {
-    display: none;
-    position: absolute;
-    top: 40%;
-    right: 58px;
-    width: 40px;
-    height: 30px;
-    background-color: transparent;
-    /* font-size: 0; */
-    border: 0;
-    cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 40%;
+  right: 60px;
+  width: 42px;
+  height: 30px;
+  background-color: transparent;
+  /* font-size: 0; */
+  border: 0;
+  cursor: pointer;
   }
   .mbt.active span {
     background-color: #222;
@@ -209,7 +230,7 @@
   z-index: 1;
   line-height: 1.2;
 }
-.hd-menu3{
+/* .hd-menu3{
   display: none;
   position: absolute;
   top: 32px;
@@ -221,7 +242,32 @@
   padding: 20px 0;
   z-index: 1;
   line-height: 1.2;
+} */
+#hd-menu33{
+  position: absolute;
+  top: 13px;
+  left: 55px;
+  background-color: #80bcbd;
+  border-radius: 35px;
+  width: 130px;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1;
+  line-height: 1.2;
 }
+#hdhd{
+  position: absolute;
+    top: 13px;
+    left: -84px;
+    background-color: #80bcbd;
+    border-radius: 35px;
+    width: 130px;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1;
+    line-height: 1.2;
+}
+
 .hd-menu2 >li{
   text-align: center;
 }
@@ -232,6 +278,9 @@
 .hd-menu3.active{
   display: block !important;
  
+}
+#hd-menu33.active{
+  display:  block !important;
 }
 .hd-menu2 a{
   display: block;
@@ -257,12 +306,21 @@ font-size: 1.2rem;
   background-color: #aad9bb;
  
 }
-.hd-menu2:hover{
+#hdhd:hover{
   background-color: #aad9bb;
  
 }
+.hd-menu2:hover {
+  background-color: #aad9bb; /* .hd-menu2에 호버되었을 때 #hd-menu33에 호버되지 않은 경우에만 적용 */
+}
 
+#hd-menu33:hover {
+  background-color: #aad9bb; /* #hd-menu33에 호버될 때의 스타일 */
+}
 
+#hd-menu33:hover .hd-menu2:hover {
+  background-color: initial;
+}
 .visual-wrap {
   display: flex;
   justify-content: center;
@@ -711,10 +769,10 @@ margin-top: 6%;
   }
 
   .mbt {
-    
+        position: absolute;
     top: 40%;
-    right: 20px;
-    width: 40px;
+    right: 60px;
+    width: 42px;
     height: 30px;
     background-color: transparent;
     /* font-size: 0; */
@@ -979,7 +1037,7 @@ margin-top: 2%;
 
  }
  @media screen and (max-width: 392px){
-  #sg-1{
+  #sgsg{
     border-bottom: none;
   }
   .nav-flex{
@@ -1074,13 +1132,17 @@ flex-direction: column;
     border-top: 1px solid #e5e5e5;
     align-items: flex-start;
 }
-  .mbt {  position: absolute;
-    top: 36%;
-    right: 20px;
-    width: 30px;
-    height: 25px;
+.mbt {  position: absolute;
+  top: 40%;
+  right: 20px;
+  width: 35px;
+  height: 25px;
+  background-color: transparent;
+  /* font-size: 0; */
+  border: 0;
+  cursor: pointer;
+}
 
-  }
   .logo {
     position: relative;
     display: block;

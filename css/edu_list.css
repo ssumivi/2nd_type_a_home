@@ -2,6 +2,7 @@
 @import url(font.css);
 @import url(all.css);
 
+
 .top-banner {
   position: relative;
   width: 100%;
@@ -259,7 +260,7 @@
 .no-br {
   display: none;
 }
-/* ��YAACu */
+/* 반응형 */
 @media screen and (max-width: 1220px) {
   html {
     font-size: 13px;
