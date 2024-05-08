@@ -263,6 +263,10 @@ video::-webkit-media-controls-fullscreen-button {
   .erinfo-subtitle {
     display: none;
   }
+  .sw-enrol .erinfo-title {
+    word-break: keep-all;
+    height: 15vw;
+  }
   .sw-enrol .enroll-list-li {
     margin-bottom: 15%;
     height: 75vw;
@@ -293,18 +297,18 @@ video::-webkit-media-controls-fullscreen-button {
     font-size: 1.7rem;
   }
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 390px) {
   .sw-enrol .enroll-list-li {
     margin-bottom: 15%;
     height: 80vw;
   }
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 360px) {
   .sw-enrol .enroll-list-li {
     margin-bottom: 15%;
     height: 80vw;
   }
-  .enroll-info-right{
+  .enroll-info-right {
     padding: 25px;
   }
 }
@@ -336,7 +340,7 @@ video::-webkit-media-controls-fullscreen-button {
     word-break: keep-all;
     height: 15vw;
   }
-  .erinfo{
+  .erinfo {
     text-align: center;
   }
 
